@@ -1,48 +1,62 @@
 <?php
 include("header.php");
 ?>
-
-
+<div class="row">
+    <div class="col-xs-12">
+        <h3 class="text-center">INÍCIO</h3>
+    </div>    
+</div>
 
 <div class="row">
-    <div class="col-sm-12">
-        <h3 class="text-center">SALDO</h3>
-        
+<div class="col-xs-12">
+    <div class="col-xs-4">     
       
-            
-                <table class="table table-condensed table-hover">
-                    <tr>
-                        <td>
-                            Valor
-                        </td>
-                        <td class="text-right">
-                            R$10.000,00
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Poupança
-                        </td>
-                        <td class="text-right">
-                            R$10.000,00
-                        </td>
-                    </tr>
-                                                   
-                    <tr class="warning">
-                        <td class="text-bold">
-                            Total
-                        </td>
-                        <td class="text-right">
-                            R$10.000,00
-                        </td>
-                    </tr>
-                </table>
+            <figure>   
+                    <img class="img-circle icon-home"  src="img/icon/saldo.png">
+                    <figcaption class="text-center"> SALDOS E EXTRATOS</figcaption>               
+            </figure>    
+               
+    </div>
+    <div class="col-xs-4">
+    
+    <figure>   
+            <img class="img-circle icon-home"  src="img/icon/deposito.png">
+            <figcaption class="text-center">DEPOSITOS</figcaption>               
+    </figure>    
 
+    </div>
+    <div class="col-xs-4">
+       
+            <figure>   
+                    <img class="img-circle icon-home"  src="img/icon/resgate.png">
+                    <figcaption class="text-center">RESGATE</figcaption>               
+            </figure>    
+        </div>    
+  
+</div>
 
-
-                
+<div class="col-xs-12">
+    <div class="col-xs-4">
+    <figure>   
+    <img class="img-circle icon-home"  src="img/icon/grupo.png">
+    <figcaption class="text-center">GRUPO</figcaption>               
+</figure>   
+    </div>
+    <div class="col-xs-4">
+          <figure>   
+                    <img class="img-circle icon-home"  src="img/icon/contemplado.png">
+                    <figcaption class="text-center">CONTEMPLADO</figcaption>               
+            </figure>   
+    </div>
+    <div class="col-xs-4">
+      
+        <figure>   
+                    <img class="img-circle icon-home"  src="img/icon/sair.png">
+                    <figcaption class="text-center">SAIR</figcaption>               
+            </figure>   
         
-    </div>    
+    </div>
+    </div>
 </div>
 
 

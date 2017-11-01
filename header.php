@@ -10,7 +10,8 @@
         <!-- JS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" crossorigin="anonymous"></script>
         <script src="js/bootstrap.js" crossorigin="anonymous"></script>
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/theme.css">
     </head>
     <body>
    
@@ -34,11 +35,10 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                        <li><a href="#">SALDO</a></li>   
+                        <li><a href="/saldo.php">SALDO</a></li>   
                         <li><a href="#">EXTRATO</a></li>    
                         <li><a href="#">DEPOSITO</a></li>   
-                        <li><a href="#">RESGATE</a></li>   
-                        <li><a href="#">SALDO</a></li>   
+                        <li><a href="#">RESGATE</a></li>  
                         <li><a href="#">GRUPO</a></li>             
                         </ul>                    
                         <ul class="nav navbar-nav navbar-right">

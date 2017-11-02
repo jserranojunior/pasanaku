@@ -1,62 +1,71 @@
 <?php
 include("header.php");
 ?>
-<div class="row">
-    <div class="col-xs-12">
-        <h3 class="text-center">INÍCIO</h3>
-    </div>    
-</div>
 
-<div class="row">
-<div class="col-xs-12">
-    <div class="col-xs-4">     
-      
-            <figure>   
-                    <img class="img-circle icon-home"  src="img/icon/saldo.png">
-                    <figcaption class="text-center"> SALDOS E EXTRATOS</figcaption>               
-            </figure>    
-               
-    </div>
-    <div class="col-xs-4">
-    
-    <figure>   
-            <img class="img-circle icon-home"  src="img/icon/deposito.png">
-            <figcaption class="text-center">DEPOSITOS</figcaption>               
-    </figure>    
-
-    </div>
-    <div class="col-xs-4">
-       
-            <figure>   
-                    <img class="img-circle icon-home"  src="img/icon/resgate.png">
-                    <figcaption class="text-center">RESGATE</figcaption>               
-            </figure>    
-        </div>    
   
+
+  <h4 class="card-header text-center">INÍCIO</h4>
+ 
+    
+ 
+
+<div class="container">
+  <div class="row">
+
+<div class="col">     
+
+        <div class="btn">
+        <a class="link-orange" href="saldo.php">
+                    <img class="img-circle icon-home"  src="img/icon/saldo.png">
+                    <p class="text-center text-icon-home"> SALDO</p>       
+                        
+        </a>  
+        </div>
+        
 </div>
 
-<div class="col-xs-12">
-    <div class="col-xs-4">
-    <figure>   
-    <img class="img-circle icon-home"  src="img/icon/grupo.png">
-    <figcaption class="text-center">GRUPO</figcaption>               
-</figure>   
-    </div>
-    <div class="col-xs-4">
-          <figure>   
-                    <img class="img-circle icon-home"  src="img/icon/contemplado.png">
-                    <figcaption class="text-center">CONTEMPLADO</figcaption>               
-            </figure>   
-    </div>
-    <div class="col-xs-4">
-      
-        <figure>   
-                    <img class="img-circle icon-home"  src="img/icon/sair.png">
-                    <figcaption class="text-center">SAIR</figcaption>               
-            </figure>   
-        
-    </div>
-    </div>
+<div class="col"> 
+        <div class="btn">   
+                <a  class="link-orange"  href="extrato.php"> 
+                        <img class="img-circle icon-home"  src="img/icon/extrato.png">
+                        <p class="text-center text-icon-home">EXTRATOS</p>
+                </a>   
+        </div> 
+ </div>
+    
+<div class="col">
+      <div class="btn">          
+            <img class="img-circle icon-home"  src="img/icon/deposito.png">
+            <p class="text-center text-icon-home">DEPOSITOS</p>               
+       </div>
 </div>
+
+<div class="col">      
+        <div class="btn">   
+                    <img class="img-circle icon-home"  src="img/icon/resgate.png">
+                    <p class="text-center text-icon-home">RESGATE</p>               
+        </div>    
+ </div> 
+
+<div class="col">
+        <div class="btn">   
+                <img class="img-circle icon-home"  src="img/icon/grupo.png">
+                <p class="text-center text-icon-home">GRUPO</p>               
+         </div>   
+</div>
+
+<div class="col">
+        <div class="btn">    
+                    <img class="img-circle icon-home"  src="img/icon/contemplado.png">
+                    <p class="text-center text-icon-home">CONTEMPLADO</p>               
+         </div>    
+</div>
+    <div class="col">
+        <div class="btn"> 
+                    <img class="img-circle icon-home"  src="img/icon/sair.png">
+                    <p class="text-center text-icon-home">SAIR</p>               
+         </div>        
+</div>
+
 
 

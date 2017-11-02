@@ -1,6 +1,31 @@
 .btn-circle {
     border-radius: 50%;
 }
-.icon-home{
-    width:70px;
+
+
+.btn:hover, .btn:focus, .btn.focus {
+    color: #e95420;
+    text-decoration: none;
+}
+.bold{
+   font-weight: bold;
+}
+img.img-circle.icon-home {
+    max-width: 200px;
+    width: 80px;
+    height: 80px;
+}
+.text-icon-home{
+font-size: 0.7rem;
+}
+
+.bg-primary, .btn-primary{
+    background-color:#f37d25 !important;
+}
+
+.text-primary, .link-orange{
+    color:#f37d25 !important;
+}
+.link-orange:hover{
+    color: #e95420;
 }

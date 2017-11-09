@@ -205,14 +205,14 @@ desired effect
         <li class="active"><a href="#"><i class="fa fa-home"></i> <span>INÍCIO</span></a></li>
         <li><a href="#"><i class="fa fa-users"></i> <span>USUARIOS</span></a></li>
         <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+          <a href="#"><i class="fa fa-link"></i> <span>RELATÓRIOS</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#">Link in level 2</a></li>
-            <li><a href="#">Link in level 2</a></li>
+            <li><a href="#">Relatório Anual</a></li>
+            <li><a href="#">Relatório Mensal</a></li>
           </ul>
         </li>
       </ul>

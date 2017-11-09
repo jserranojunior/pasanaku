@@ -251,7 +251,7 @@ desired effect
       Realizando sonhos
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2017 <a href="#">Pasanaku</a>.</strong> Todos os direitos reservados.
+    <strong>Copyright &copy; 2017 <a href="#">Pasanaku</a>.</strong>
   </footer>
 
   <!-- Control Sidebar -->

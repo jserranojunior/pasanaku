@@ -11,12 +11,5 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.styles([
-            'resources/assets/css/style.css',
-            'resources/assets/css/skin-pasanaku.css'],
-            'public/css/all.css')
-
-    .js('resources/assets/js/app.js', 'public/js')
+mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css');
-   
-

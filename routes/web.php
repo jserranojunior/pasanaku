@@ -12,17 +12,23 @@
 */
 
 Route::get('/', function () {
-    return view('inicio');
+    return view('iniciocliente');
 });
 
 Auth::routes();
 
 
 Route::get('/home', function () {
-    return view('inicio');
+    return view('iniciocliente');
 });
 
 
-Route::get('/inicio', function () {
-    return view('inicio');
+Route::get('/cliente', function () {
+    return view('iniciocliente');
+});
+
+
+
+Route::get('/adm', function () {
+    return view('inicioadm');
 });

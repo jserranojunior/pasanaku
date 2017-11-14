@@ -215,9 +215,9 @@ desired effect
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header text-center">MENU</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-home"></i> <span>INÍCIO</span></a></li>
-        <li><a href="#"><i class="fa fa-university"></i> <span>SALDO</span></a></li>
-        <li><a href="#"><i class="fa fa-line-chart"></i> <span>EXTRATO</span></a></li>
+        <li class="active"><a href="./"><i class="fa fa-home"></i> <span>INÍCIO</span></a></li>
+        <li><a href="./saldo"><i class="fa fa-university"></i> <span>SALDO</span></a></li>
+        <li><a href="./extrato"><i class="fa fa-line-chart"></i> <span>EXTRATO</span></a></li>
         <li><a href="#"><i class="fa fa-plus-square-o"></i> <span>DEPOSITO</span></a></li>
         <li><a href="#"><i class="fa fa-life-ring"></i> <span>RESGATE</span></a></li>
         <li><a href="#"><i class="fa fa-users"></i> <span>GRUPO</span></a></li>

@@ -11,24 +11,24 @@
 |
 */
 
+Auth::routes();
+
 Route::get('/', function () {
     return view('iniciocliente');
 });
-
-Auth::routes();
-
-
-Route::get('/home', function () {
-    return view('iniciocliente');
-});
-
 
 Route::get('/cliente', function () {
     return view('iniciocliente');
 });
 
-
-
 Route::get('/adm', function () {
     return view('inicioadm');
+});
+
+Route::get('/saldo', function () {
+    return view('saldo');
+});
+
+Route::get('/extrato', function () {
+    return view('extrato');
 });

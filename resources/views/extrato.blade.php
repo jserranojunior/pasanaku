@@ -10,6 +10,7 @@
             <h2 class="center">EXTRATO</h2>
             </div>
             <div class="body-box">
+            <div class="col-md-offset-4 col-md-4">
             <table class="table  table-hover">
             <thead>    
             <tr>
@@ -52,7 +53,7 @@
                             </tr>
                         </tbody></table>
             </div>
-
+        </div>
         </div>  
      
         

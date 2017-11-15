@@ -32,3 +32,11 @@ Route::get('/saldo', function () {
 Route::get('/extrato', function () {
     return view('extrato');
 });
+
+Route::get('/deposito', function () {
+    return view('deposito');
+});
+
+Route::get('/resgate', function () {
+    return view('resgate');
+});

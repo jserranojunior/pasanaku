@@ -218,8 +218,8 @@ desired effect
         <li class="active"><a href="./"><i class="fa fa-home"></i> <span>INÍCIO</span></a></li>
         <li><a href="./saldo"><i class="fa fa-university"></i> <span>SALDO</span></a></li>
         <li><a href="./extrato"><i class="fa fa-line-chart"></i> <span>EXTRATO</span></a></li>
-        <li><a href="#"><i class="fa fa-plus-square-o"></i> <span>DEPOSITO</span></a></li>
-        <li><a href="#"><i class="fa fa-life-ring"></i> <span>RESGATE</span></a></li>
+        <li><a href="./deposito"><i class="fa fa-plus-square-o"></i> <span>DEPOSITO</span></a></li>
+        <li><a href="./resgate"><i class="fa fa-life-ring"></i> <span>RESGATE</span></a></li>
         <li><a href="#"><i class="fa fa-users"></i> <span>GRUPO</span></a></li>
         <li><a href="#"><i class="fa fa-heart"></i> <span>CONTEMPLADO</span></a></li>
        

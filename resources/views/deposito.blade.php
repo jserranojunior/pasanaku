@@ -7,35 +7,66 @@
     <section class="content-header text-center">
         <div class="box">
             <div class="header-box">
-           
-            <h2 class="center">SALDO</h2>
+            <h2 class="center">DEPOSITO</h2>
             </div>
             <div class="body-box">
             <div class="col-md-offset-4 col-md-4">
-            <table class="table  table-hover">
-                    <tbody><tr>
-                        <td class="text-left">
-                            VALOR 
-                        </td>
-                        <td class="text-right">
-                            R$10.000,00
-                        </td>
-                    </tr>
-                                                                   
-                    <tr class="text-primary">
-                        <td class="text-bold">
-                        <h4  class="text-left">Total</h4>
-                        </td>
-                        <td class="text-right">
-                            <h4>R$10.000,00</h4>
-                        </td>
-                    </tr>
-                </tbody>
-              </table>
-            </div>
-        </div>
-        </div>  
-     
+
+           <form class="form-horizontal">
+
+              <div class="form-group ">
+                <label for="valor" class="col-sm-6 ">VALOR</label>
+                <div class="col-sm-6">  
+                  <input type="text" class="form-control" name="valor">
+                </div>
+              </div><!-- FECHAMENTO FORM_GROUP -->
+
+              <div class="form-group">
+                <label for="data" class="col-sm-6">DATA</label>
+                <div class="col-sm-6">  
+                  <input type="date" class="form-control" name="data">
+                </div>
+              </div><!-- FECHAMENTO FORM_GROUP -->
+
+              <div class="form-group">
+                <label for="tipodeposito" class="col-sm-6">TIPO DE DEPOSITO</label>
+                <div class="col-sm-6">  
+                  <select class="form-control" name="tipodeposito">
+                    <option value="" disabled selected>SELECIONE</option>
+                    <option value="">DINHEIRO</option>
+                    <option value="">BOLETO</option>
+                    <option value="">TRANSFÊRENCIA</option>
+                  </select>
+                </div>
+              </div><!-- FECHAMENTO FORM_GROUP -->
+
+              <div class="form-group">
+                <label for="banco" class="col-sm-6">BANCO</label>
+                <div class="col-sm-6">  
+                    <select class="form-control" name="banco">
+                      <option value="" disabled selected>SELECIONE</option>
+                      <option value="">BB</option>
+                      <option value="">CAIXA E.F.</option>
+                      <option value="">ITAU</option>
+                      <option value="">BRADESCO</option>
+                      <option value="">SMART</option>                
+                    </select>
+                </div>
+              </div><!-- FECHAMENTO FORM_GROUP -->
+
+              <div class="form-group text-right">
+                <div class="col-sm-6 col-sm-offset-6">  
+                  <input class="btn btn-primary form-control" value="DEPOSITAR">             
+                </div>
+              </div><!-- FECHAMENTO FORM_GROUP -->
+
+          </form>            
+           
+                       
+
+            <!-- DIV PARA CENTRALIZAR -->
+        </div>  <!-- END BODY BOX -->
+     </div>  <!-- END BOX -->
         
       
     </section>

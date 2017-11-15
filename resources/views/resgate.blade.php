@@ -55,7 +55,7 @@
 
               <div class="form-group text-right">
                 <div class="col-sm-6 col-sm-offset-6">  
-                  <input class="btn btn-primary form-control" value="DEPOSITAR">             
+                  <input class="btn btn-primary form-control" value="RESGATAR">             
                 </div>
               </div><!-- FECHAMENTO FORM_GROUP -->
 

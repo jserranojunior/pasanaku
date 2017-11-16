@@ -153,3 +153,8 @@
     border-color: #b75539;
 }
 
+.main-header .logo {
+    font-size: 13px;
+    line-height: 16px;
+    padding-top: 8px;
+}

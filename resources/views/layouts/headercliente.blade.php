@@ -221,7 +221,6 @@ desired effect
         <li><a href="./deposito"><i class="fa fa-plus-square-o"></i> <span>DEPOSITO</span></a></li>
         <li><a href="./resgate"><i class="fa fa-life-ring"></i> <span>RESGATE</span></a></li>
         <li><a href="#"><i class="fa fa-users"></i> <span>GRUPO</span></a></li>
-        <li><a href="#"><i class="fa fa-heart"></i> <span>CONTEMPLADO</span></a></li>
        
         <li><a href="{{Url('/adm')}}"><i class="fa fa-eye"></i> <span>VISÃO DE ADMINISTRADOR</span></a></li>
 

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit64f5db8075dea945eb856f255d8eaf63
+class ComposerStaticInit83e28779b66b8b9a3758bb85d31ff5aa
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -273,6 +273,7 @@ class ComposerStaticInit64f5db8075dea945eb856f255d8eaf63
     );
 
     public static $classMap = array (
+        'App\\Admin' => __DIR__ . '/../..' . '/app/Admin.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -294,6 +295,7 @@ class ComposerStaticInit64f5db8075dea945eb856f255d8eaf63
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
+        'CreateAdminsTable' => __DIR__ . '/../..' . '/database/migrations/2017_11_17_124008_create_admins_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/AbstractField.php',
@@ -3310,10 +3312,10 @@ class ComposerStaticInit64f5db8075dea945eb856f255d8eaf63
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit64f5db8075dea945eb856f255d8eaf63::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit64f5db8075dea945eb856f255d8eaf63::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit64f5db8075dea945eb856f255d8eaf63::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit64f5db8075dea945eb856f255d8eaf63::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit83e28779b66b8b9a3758bb85d31ff5aa::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit83e28779b66b8b9a3758bb85d31ff5aa::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit83e28779b66b8b9a3758bb85d31ff5aa::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit83e28779b66b8b9a3758bb85d31ff5aa::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -160,7 +160,7 @@ desired effect
               <!-- The user image in the navbar-->
               <img src="/pasanaku/public/img/delira.jpg" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">David Delira</span>
+              <span class="hidden-xs">{{ auth()->guard('admin')->user()->name }}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
@@ -168,10 +168,8 @@ desired effect
                 <img src="/pasanaku/public/img/delira.jpg" class="img-circle" alt="User Image">
 
                 <p class="text-center">
-                  David Delira
-                  <small>Administrador</small>
-                </p>
-                
+                  {{ auth()->guard('admin')->user()->name }}     
+                </p>                
               </li>
               
               <!-- Menu Footer-->
@@ -203,7 +201,7 @@ desired effect
           <img src="/pasanaku/public/img/delira.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>David Delira</p>
+          <p>{{ auth()->guard('admin')->user()->name }}</p>
           <!-- Status -->
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>

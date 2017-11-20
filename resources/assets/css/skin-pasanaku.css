@@ -158,3 +158,22 @@
     line-height: 16px;
     padding-top: 8px;
 }
+
+body.color-pasanaku {
+    background-color: #ed5f37;
+}
+
+.configdiv {border: 1px solid #DDDDDD;
+    margin-right: 28px;
+    margin-bottom: 25px;
+    padding: 10px;
+}
+
+
+.container-center {
+    margin-top: 15%;
+}
+
+.text-white{
+    color:white;
+}

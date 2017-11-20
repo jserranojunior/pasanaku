@@ -10,12 +10,14 @@ Route::prefix('admin')->group(function() {
   });
 
 
- 
+  Route::get('/inicio', function () {
+    return view('inicio');
+});
 
 
 
 Route::get('/', function () {
-    return view('iniciocliente');
+    return view('manutencao');
 });
 
 

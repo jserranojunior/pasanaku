@@ -79,7 +79,9 @@ desired effect
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>C</b>P</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>CONTA PASANAKU <br>FAMILIA FELIZ (PFF)</span>
+      <span class="logo-lg">
+      <b>CONTA <br>
+      Pasanaku - Familia Feliz (PFF)</span>
     </a>
 
     <!-- Header Navbar -->

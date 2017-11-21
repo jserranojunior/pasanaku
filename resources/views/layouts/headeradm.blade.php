@@ -178,7 +178,7 @@ desired effect
                   <a href="#" class="btn btn-default btn-flat">Perfil</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sair</a>
+                  <a href="{{Route('admin.logout')}}" class="btn btn-default btn-flat">Sair</a>
                 </div>
               </li>
             </ul>
@@ -228,7 +228,8 @@ desired effect
           </ul>
         </li>
         <li><a href="{{Url('/cliente')}}"><i class="fa fa-eye"></i> <span>VISÃO DE CLIENTE</span></a></li>
-
+        <li><a href="{{Route('admin.logout')}}"><i class="fa fa-power-off"></i> <span>SAIR</span></a></li>
+        
       </ul>
       <!-- /.sidebar-menu -->
     </section>

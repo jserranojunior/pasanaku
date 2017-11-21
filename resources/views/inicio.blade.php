@@ -49,12 +49,38 @@
 </div>
 
 </div>
-
+<div class="footer text-center text-white">
+        <a href="{{Route('admin.login')}}" class="btn btn-sm btn-default">Administrador</a>
+    </div>
 
 <style>
 .img-inicial{
    width:100%;
 }
+
+*  {
+    margin:0;
+    padding:0;
+}
+
+html, body {height:100%;}
+
+.geral {
+    min-height:100%;
+    position:relative;
+    width:800px;
+}
+
+.footer {
+    position:absolute;
+    bottom:5;
+    width:100%;
+}
+
+.content {overflow:hidden;}
+.aside {width:200px;}
+.fleft {float:left;}
+.fright {float:right;}
 </style>
     
 

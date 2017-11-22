@@ -158,14 +158,14 @@ desired effect
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <!-- The user image in the navbar-->
-              <img src="/pasanaku/public/img/delira.jpg" class="user-image" alt="User Image">
+              <img  src="{{URL('img')}}/{{ auth()->guard('admin')->user()->image }}" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
               <span class="hidden-xs">{{ auth()->guard('admin')->user()->name }}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
               <li class="user-header">
-                <img src="/pasanaku/public/img/delira.jpg" class="img-circle" alt="User Image">
+                <img src="{{URL('img')}}/{{ auth()->guard('admin')->user()->image }}"  class="img-circle" alt="User Image">
 
                 <p class="text-center">
                   {{ auth()->guard('admin')->user()->name }}     
@@ -198,7 +198,7 @@ desired effect
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="/pasanaku/public/img/delira.jpg" class="img-circle" alt="User Image">
+          <img src="{{URL('img')}}/{{ auth()->guard('admin')->user()->image }}"  class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>{{ auth()->guard('admin')->user()->name }}</p>
@@ -227,7 +227,7 @@ desired effect
             
           </ul>
         </li>
-        <li><a href="{{Url('/cliente')}}"><i class="fa fa-eye"></i> <span>VISÃO DE CLIENTE</span></a></li>
+        
         <li><a href="{{Route('admin.logout')}}"><i class="fa fa-power-off"></i> <span>SAIR</span></a></li>
         
       </ul>

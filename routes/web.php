@@ -15,10 +15,12 @@ Route::prefix('admin')->group(function() {
 });
 
 
-
 Route::get('/', function () {
-    return view('manutencao');
+    return view('inicio');
 });
+
+
+Route::get('/logout','Auth\LoginController@logout')->name('logout');
 
 
 
@@ -28,10 +30,7 @@ Route::group(['middleware' => 'web'], function(){
     Route::get('/cliente', function () {
         return view('iniciocliente');
     });
-    
-    
-    
-    
+               
     Route::get('/saldo', function () {
         return view('saldo');
     });

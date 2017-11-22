@@ -36,9 +36,11 @@
 </div>
 <div class="row text-center">
     <div class="col-md-4 col-md-offset-4">
+       <a href="{{Route('login')}}">
         <div class="btn btn-default">   
            FAZER LOGIN
         </div> 
+        </a>
         <div class="btn btn-default"> 
             ABRIR CONTA
         </div>     

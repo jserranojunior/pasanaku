@@ -160,17 +160,17 @@ desired effect
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <!-- The user image in the navbar-->
-              <img src="/pasanaku/public/img/jorge.jpg" class="user-image" alt="User Image">
+              <img src="{{URL('img')}}/{{auth()->user()->image}}" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Jorge Serrano Junior</span>
+              <span class="hidden-xs">{{auth()->user()->name}}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
               <li class="user-header">
-                <img src="/pasanaku/public/img/jorge.jpg" class="img-circle" alt="User Image">
+                <img src="{{URL('img')}}/{{auth()->user()->image}}"  class="img-circle" alt="User Image">
 
                 <p class="text-center">
-                  Jorge Serrano Junior
+                {{auth()->user()->name}}
                   <small>Administrador</small>
                 </p>
                 
@@ -202,10 +202,10 @@ desired effect
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="/pasanaku/public/img/jorge.jpg" class="img-circle" alt="User Image">
+          <img src="{{URL('img')}}/{{auth()->user()->image}}"  class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Jorge Serrano Junior</p>
+          <p>{{auth()->user()->name}}</p>
           <!-- Status -->
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
@@ -224,8 +224,8 @@ desired effect
         <li><a href="./resgate"><i class="fa fa-life-ring"></i> <span>RESGATE</span></a></li>
         <li><a href="#"><i class="fa fa-users"></i> <span>GRUPO</span></a></li>
        
-        <li><a href="{{Url('/admin')}}"><i class="fa fa-eye"></i> <span>VISÃO DE ADMINISTRADOR</span></a></li>
-
+        
+        <li><a href="{{Route('logout')}}"><i class="fa fa-power-off"></i> <span>SAIR</span></a></li>
 
       </ul>
       <!-- /.sidebar-menu -->

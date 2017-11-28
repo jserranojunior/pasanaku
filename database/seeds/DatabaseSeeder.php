@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             ->insert([
                 'name' => 'Cliente Pasanaku',
                 'email' => 'cliente@cliente.com',
+                'cpf' => '30968146600',
                 'password' => Hash::make('12345'),
                 'image' => 'cliente.png',
                 ]);

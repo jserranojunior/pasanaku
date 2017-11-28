@@ -23,7 +23,7 @@
                                     01/11/2017
                                 </td>
                                 <td class="text-right ">
-                                    + R$50.000,00
+                                    + R$0,00
                                 </td>
                             </tr>
                             <tr>
@@ -31,7 +31,7 @@
                                     01/11/2017
                                 </td>
                                 <td class="text-right ">
-                                    - R$10.000,00
+                                    - R$0,00
                                 </td>
                             </tr>
                             <tr>
@@ -39,7 +39,7 @@
                                     01/11/2017
                                 </td>
                                 <td class="text-right ">
-                                    + R$50.000,00
+                                    + R$0,00
                                 </td>
                             </tr>
                                                                            
@@ -48,7 +48,7 @@
                                 <h4>Total</h4>
                                 </td>
                                 <td class="text-right">
-                                    <h4>R$90.000,00</h4>
+                                    <h4>R$0,00</h4>
                                 </td>
                             </tr>
                         </tbody></table>

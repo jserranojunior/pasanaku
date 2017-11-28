@@ -18,7 +18,7 @@
                             VALOR 
                         </td>
                         <td class="text-right">
-                            R$10.000,00
+                            R$0,00
                         </td>
                     </tr>
                                                                    
@@ -27,7 +27,7 @@
                         <h4  class="text-left">Total</h4>
                         </td>
                         <td class="text-right">
-                            <h4>R$10.000,00</h4>
+                            <h4>R$0,00</h4>
                         </td>
                     </tr>
                 </tbody>

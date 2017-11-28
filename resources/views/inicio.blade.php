@@ -41,9 +41,11 @@
            FAZER LOGIN
         </div> 
         </a>
+        <a href="{{URL('/register')}}">
         <div class="btn btn-default"> 
             ABRIR CONTA
-        </div>     
+        </div>  
+        </a>   
     </div>  
     
         

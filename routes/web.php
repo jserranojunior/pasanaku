@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 Route::get('/logout','Auth\LoginController@logout')->name('logout');
 
-
+Route::any('/abrirconta','Auth\RegisterController@create')->name('abrirconta');
 
 Route::group(['middleware' => 'web'], function(){
     Route::auth();  

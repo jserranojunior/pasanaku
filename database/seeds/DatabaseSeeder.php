@@ -20,5 +20,21 @@ class DatabaseSeeder extends Seeder
                 'password' => Hash::make('12345'),
                 'image' => 'cliente.png',
                 ]);
+
+                DB::table('admins')
+                ->insert([
+                    'name' => 'David Delira',
+                    'email' => 'daviddelira@live.com',
+                    'password' => Hash::make('Jr140690@'),
+                    'image' => 'david.jpg',
+                    ]);
+
+                    DB::table('admins')
+                    ->insert([
+                        'name' => 'Jorge Serrano Junior',
+                        'email' => 'jorgeserranojunior@hotmail.com',
+                        'password' => Hash::make('carro'),
+                        'image' => 'jorge.jpg',
+                        ]);
     }
 }

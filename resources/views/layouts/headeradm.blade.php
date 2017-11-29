@@ -213,8 +213,8 @@ desired effect
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header text-center">MENU</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-home"></i> <span>INÍCIO</span></a></li>
-        <li><a href="#"><i class="fa fa-users"></i> <span>USUARIOS</span></a></li>
+        <li class="active"><a href="{{URL('/admin')}}"><i class="fa fa-home"></i> <span>INÍCIO</span></a></li>
+        <li><a href="{{URL('admin/clientes')}}"><i class="fa fa-users"></i> <span>CLIENTES</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>RELATÓRIOS</span>
             <span class="pull-right-container">

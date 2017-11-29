@@ -82,6 +82,8 @@
                                 </button>
                             </div>
                         </div>
+                        <input id="image" type="hidden" class="form-control" value="cliente.png" name="image">
+                            
                     </form>
                 </div>
             </div>

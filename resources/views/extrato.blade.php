@@ -20,28 +20,13 @@
         </thead>
                             <tbody><tr>
                                 <td class="text-left">
-                                    01/11/2017
+                                    01/01/2017
                                 </td>
                                 <td class="text-right ">
                                     + R$0,00
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="text-left">
-                                    01/11/2017
-                                </td>
-                                <td class="text-right ">
-                                    - R$0,00
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-left">
-                                    01/11/2017
-                                </td>
-                                <td class="text-right ">
-                                    + R$0,00
-                                </td>
-                            </tr>
+                            
                                                                            
                             <tr class="text-primary">
                                 <td class="text-bold text-left">

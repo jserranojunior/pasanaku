@@ -14,8 +14,8 @@ class AddColunsPhoneDtNascimento extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->date('data_nascimento');
-            $table->bigInteger('celular');
+            $table->date('data_nascimento')->nullable();
+            $table->bigInteger('celular')->nullable();
         });
     }
 

@@ -17,6 +17,7 @@ class Clientes extends Model
             if($sel->celular == 0){
                 $sel->celular = null;
             }
+            $sel->data_nascimento = date('d/m/Y', strtotime($sel->data_nascimento));
             if($sel->cpf == 0){
                 $sel->cpf = null;
             }

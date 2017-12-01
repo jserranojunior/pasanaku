@@ -11,7 +11,10 @@
     <title>Conta Pasanaku</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ url('css/all.css') }}" rel="stylesheet">
+    <script src="{{ url('js/all.js') }}"></script>
+
+
 </head>
 <body>
     <div id="app">
@@ -74,6 +77,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+   
 </body>
 </html>

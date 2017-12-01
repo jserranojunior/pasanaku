@@ -27,7 +27,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/cliente';
 
     /**
      * Create a new controller instance.
@@ -47,10 +47,18 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        /* REMOVENDO MASCARAS */
+        $data['celular'] =  preg_replace("/[^0-9]/", "", $data['celular']);
+        $data['cpf']  =  preg_replace("/[^0-9]/", "", $data['cpf']);
+        
+        if($data['cpf'] == ''){
+            $data['cpf'] = null;
+        }
+
+        // dd($data['data_nascimento']);
         return Validator::make($data, [
             'name' => 'required|string|max:255',
-            'cpf' => 'required|numeric|min:6|unique:users',
-            
+            'celular' => 'required|string|min:10|unique:users',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
         ]);
@@ -64,13 +72,21 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        /* REMOVENDO MASCARAS */
+        $data['celular'] =  preg_replace("/[^0-9]/", "", $data['celular']);
+        $data['cpf']  =  preg_replace("/[^0-9]/", "", $data['cpf']);
 
-        
+        if($data['cpf'] == ''){
+            $data['cpf'] = null;
+        }
+     
         return User::create([
             'name' => $data['name'],
             'cpf' => $data['cpf'],
+            'celular' => $data['celular'],
             'image' =>  $data['image'],
             'email' => $data['email'],
+            'data_nascimento' => $data['data_nascimento'],
             'password' => bcrypt($data['password']),
         ]);
     }

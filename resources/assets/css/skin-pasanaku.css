@@ -177,3 +177,12 @@ body.color-pasanaku {
 .text-white{
     color:white;
 }
+
+.navbar-default {
+    background-color: #ed5f37;
+    border-color: #eeeeee;
+}
+
+.navbar-default .navbar-brand {
+    color: #fff;
+}

@@ -15,23 +15,34 @@
 
     <!-- Main content -->
     <section class="content container-fluid">
-
-        <table class="table table-condensed" id="tabelaClientes">
-
+<div class="box">
+  <div class="box-body">
+       <table class="table table-condensed table-hover" id="tabelaClientes">
+    <thead>
         <tr>
             <th>NOME</th>
-            <th>email</th>
+            <th>EMAIL</th>
             <th>CPF</th>    
+            <th>DATA DE NASCIMENTO</th> 
+            <th>CELULAR</th> 
          </tr>
+    </thead>
+    <tbody>     
         @foreach ($dados as $dados)
             <tr>
                 <td>  {{$dados->name}}</td>
                 <td>  {{$dados->email}}</td>
-                <td>  {{$dados->cpf}}</td>
+                <td class="cpf_mascara">  {{$dados->cpf}}</td>
+                <td class="data_mascara">  {{$dados->data_nascimento}}</td>
+                <td class=" @if($dados->celular !== null) telefone_mascara @endif ">  {{$dados->celular}}</td>
             </tr>
       
         @endforeach
-        </table>      
+        </tbody>
+        </table>   
+  </div>
+</div>
+          
 
      </section>
     <!-- /.content -->
@@ -133,12 +144,3 @@
 
 @endsection
 
-<link rel="stylesheet" href="http://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-
-
-
-<script>
-$(document).ready(function(){
-    $('#tabelaClientes').DataTable();
-});
-</script>

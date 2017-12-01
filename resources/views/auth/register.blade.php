@@ -29,7 +29,7 @@
                             <label for="cpf" class="col-md-4 control-label">CPF</label>
 
                             <div class="col-md-6">
-                                <input id="cpf" type="number" class="form-control" name="cpf" value="{{ old('cpf') }}" required>
+                                <input id="cpf" type="text" class="form-control cpf_mascara" name="cpf" value="{{ old('cpf') }}">
 
                                 @if ($errors->has('cpf'))
                                     <span class="help-block">
@@ -38,6 +38,37 @@
                                 @endif
                             </div>
                         </div>
+
+                        <div class="form-group{{ $errors->has('data_nascimento') ? ' has-error' : '' }}">
+                            <label for="data_nascimento" class="col-md-4 control-label">Data de Nascimento</label>
+
+                            <div class="col-md-6">
+                                <input id="data_nascimento" type="date" class="form-control" name="data_nascimento" value="{{ old('data_nascimento') }}" required>
+
+                                @if ($errors->has('data_nascimento'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('data_nascimento') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                      <!-- jQuery 3 -->
+
+                        <div class="form-group{{ $errors->has('celular') ? ' has-error' : '' }}">
+                            <label for="celular" class="col-md-4 control-label">Celular</label>
+
+                            <div class="col-md-6">
+                                <input id="celular"  type="text" class="form-control telefone_mascara" name="celular" value="{{ old('celular') }}" required>
+
+                                @if ($errors->has('celular'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('celular') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-mail</label>

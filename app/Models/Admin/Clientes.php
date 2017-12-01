@@ -22,7 +22,7 @@ class Clientes extends Model
 
 
             
-            if($sel->data_nascimento == "0000-00-00"){
+            if(($sel->data_nascimento == "0000-00-00") or ($sel->data_nascimento == "")){
                 $sel->data_nascimento = null;
             }else{
                 $sel->data_nascimento = date('d/m/Y', strtotime($sel->data_nascimento));    

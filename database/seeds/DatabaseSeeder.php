@@ -10,9 +10,29 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $date = date('Y-m-d h:i:s', time());
+
+        DB::table('transacoes')
+        ->insert([
+            'id_user' => 1,
+            'valor' => 1500.38,
+            'tipo' => 'deposito',
+            'data_efetuada' => $date,
+            'data_agendada' => $date,
+            'pagamento_feito' => false,
+            'created_at' => $date,
+            'updated_at' => $date,
+        ]);
+
+
+/* 
+$table->bigInteger('id_admin')->nullable();
+            $table->boolean('pagamento_feito');
+*/
+
         // $this->call(UsersTableSeeder::class);
        
-        
+        /*
             DB::table('users')
             ->insert([
                 'name' => 'Cliente Pasanaku',
@@ -37,5 +57,7 @@ class DatabaseSeeder extends Seeder
                         'password' => Hash::make('carro'),
                         'image' => 'jorge.jpg',
                         ]);
+
+                        */
     }
 }

@@ -25,12 +25,22 @@ Route::any('/abrirconta','Auth\RegisterController@create')->name('abrirconta');
 Route::get('/inicio', function () {return view('inicio');});
 Route::get('/', function () {return view('inicio');});
 
+
 /* CLIENTES */
+/* ADMINISTRAÇÃO */
+Route::group(['as' => 'usuario.', 'middleware' => ['auth:web']],function(){
+  Route::get('/extrato/teste', 'User\Contas\extratoController@index'); 
+});
+
+
 Route::group(['middleware' => 'web'], function(){
     Route::auth();         
     Route::get('/cliente', function () {return view('iniciocliente');});               
     Route::get('/saldo', function () { return view('saldo'); });    
-    Route::get('/extrato', function () {return view('extrato');});    
+    Route::get('/extrato', function () {return view('extrato');});   
+    
+    
+
     Route::get('/deposito', function () {return view('deposito');});    
     Route::get('/resgate', function () {return view('resgate');});  
 });

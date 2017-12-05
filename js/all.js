@@ -645,6 +645,9 @@ $(document).ready(function(){
 
     /* DATA */
     $('.data_mascara').mask('00/00/0000');
+
+    /* DINHEIRO */
+    $('.dinheiro_mascara').mask('000.000.000.000.000,00', {reverse: true});
 });
 
     // FIM MASCARAS

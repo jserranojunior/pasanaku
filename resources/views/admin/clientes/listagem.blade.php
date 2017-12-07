@@ -1,5 +1,5 @@
 
-@extends('layouts.headeradm')
+@extends('layouts.headeradm', $notificacoes)
 
 @section('main') 
   <!-- Content Wrapper. Contains page content -->

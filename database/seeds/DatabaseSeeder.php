@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
         DB::table('transacoes')
         ->insert([
             'id_user' => 1,
-            'valor' => 1500.38,
+            'valor' => -100.38,
             'tipo' => 'deposito',
             'data_efetuada' => $date,
             'data_agendada' => $date,

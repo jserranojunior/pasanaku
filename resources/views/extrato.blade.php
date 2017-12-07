@@ -7,7 +7,7 @@
     <section class="content-header text-center">
         <div class="box">
             <div class="header-box">
-            <h2 class="center">EXTRATO</h2>
+            <h2 class="center">EXTRATO TESTE</h2>
             </div>
             <div class="body-box">
             <div class="col-md-offset-4 col-md-4">
@@ -18,25 +18,29 @@
                     <td class="text-right">VALOR</td>
                 </tr>
         </thead>
-                            <tbody><tr>
-                                <td class="text-left">
-                                    01/01/2017
+                            <tbody>
+                            @foreach($dados as $item)
+                            <tr>
+                                <td class="text-left data_mascara">
+                                    {{$item->data_efetuada}}
                                 </td>
-                                <td class="text-right ">
-                                    + R$0,00
+                                <td class="text-right">
+                                    {{$item->tipo}}<span class="dinheiro_mascara">{{$item->valor}}</span>
                                 </td>
                             </tr>
+                            @endforeach
                             
                                                                            
                             <tr class="text-primary">
                                 <td class="text-bold text-left">
                                 <h4>Total</h4>
                                 </td>
-                                <td class="text-right">
-                                    <h4>R$0,00</h4>
+                                <td class="text-right dinheiro_mascara">
+                                    <h4>{{$total}}</h4>
                                 </td>
                             </tr>
-                        </tbody></table>
+                        </tbody>
+                      </table>
             </div>
         </div>
         </div>  
@@ -145,6 +149,7 @@
   <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
+
 
 
 </body>

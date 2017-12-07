@@ -62,36 +62,24 @@ desired effect
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <!-- Messages: style can be found in dropdown.less-->
-          <li class="dropdown messages-menu">
-            <!-- Menu toggle button -->
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-envelope-o"></i>
-              <span class="label label-success">0</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">Você tem 0 mensages</li>
-              <li>
-                <!-- inner menu: contains the messages -->
-                <ul class="menu">
-                  
-                  <!-- end message -->
-                </ul>
-                <!-- /.menu -->
-              </li>
-              <li class="footer"><a href="#">Ver todas as mensagens</a></li>
-            </ul>
-          </li>
-          <!-- /.messages-menu -->
+          
 
           <!-- Notifications Menu -->
           <li class="dropdown notifications-menu">
             <!-- Menu toggle button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-bell-o"></i>
-              <span class="label label-warning">0</span>
+              <span class="label label-warning">{{$notification}}</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">Você tem 0 notificações</li>
+              <li class="header text-center">
+              Você tem {{$notification}} 
+              @if($notification > 1) 
+                notificações 
+              @else 
+                notificacão 
+              @endif  
+              </li>
               <li>
                 <!-- Inner Menu: contains the notifications -->
                 <ul class="menu">
@@ -99,30 +87,11 @@ desired effect
                   <!-- end notification -->
                 </ul>
               </li>
-              <li class="footer"><a href="#">Ver todas</a></li>
+              <li class="footer text-center"><a href="#">Visualizar</a></li>
             </ul>
           </li>
           <!-- Tasks Menu -->
-          <li class="dropdown tasks-menu">
-            <!-- Menu Toggle Button -->
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-flag-o"></i>
-              <span class="label label-danger">0</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">Você tem 0 tarefas</li>
-              <li>
-                <!-- Inner menu: contains the tasks -->
-                <ul class="menu">
-                  
-                  <!-- end task item -->
-                </ul>
-              </li>
-              <li class="footer">
-                <a href="#">Ver todas as tarefas</a>
-              </li>
-            </ul>
-          </li>
+          
           <!-- User Account Menu -->
           <li class="dropdown user user-menu">
             <!-- Menu Toggle Button -->
@@ -183,7 +152,7 @@ desired effect
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header text-center">MENU</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="{{URL('/admin')}}"><i class="fa fa-home"></i> <span>INÍCIO</span></a></li>
+        <li class=""><a href="{{URL('/admin')}}"><i class="fa fa-home"></i> <span>INÍCIO</span></a></li>
         <li><a href="{{URL('admin/clientes')}}"><i class="fa fa-users"></i> <span>CLIENTES</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>RELATÓRIOS</span>

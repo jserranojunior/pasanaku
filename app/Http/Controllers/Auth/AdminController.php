@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 use Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Admin\Header\notificacoesController;
 
 class AdminController extends Controller
 {
@@ -13,8 +14,14 @@ class AdminController extends Controller
     }
     
     public function index(){
-      
-        return view('inicioadm');
+
+        $notificacao = new notificacoesController();
+        $notificacao = $notificacao->notification();
+        
+        $dados = array('notificacoes' =>  $notificacao);
+
+    
+        return view('inicioadm')->with($dados);
     }
 
     public function logout()

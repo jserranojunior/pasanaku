@@ -29,19 +29,20 @@ Route::get('/', function () {return view('inicio');});
 /* CLIENTES */
 /* ADMINISTRAÇÃO */
 Route::group(['as' => 'usuario.', 'middleware' => ['auth:web']],function(){
-  Route::get('/extrato/teste', 'User\Contas\extratoController@index'); 
+  
+  /* EXTRATO */
+  Route::get('/extrato', 'User\Contas\extratoController@index'); 
+
+  /* DEPOSITOO */
+  Route::get('/deposito', 'User\Contas\depositoController@index');
+  Route::post('/deposito/novo', 'User\Contas\depositoController@create');
 });
 
 
 Route::group(['middleware' => 'web'], function(){
     Route::auth();         
     Route::get('/cliente', function () {return view('iniciocliente');});               
-    Route::get('/saldo', function () { return view('saldo'); });    
-    Route::get('/extrato', function () {return view('extrato');});   
-    
-    
-
-    Route::get('/deposito', function () {return view('deposito');});    
+    Route::get('/saldo', function () { return view('saldo'); });       
     Route::get('/resgate', function () {return view('resgate');});  
 });
 

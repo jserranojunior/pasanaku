@@ -1,6 +1,9 @@
 @extends('layouts.headercliente')
 
+
+
 @section('main') 
+
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -12,34 +15,35 @@
             <div class="body-box">
             <div class="col-md-offset-4 col-md-4">
 
-           <form class="form-horizontal">
-
+           <form action="{{url('/deposito/novo')}}" method="post" class="form-horizontal">
+             
               <div class="form-group ">
                 <label for="valor" class="col-sm-6 ">VALOR</label>
                 <div class="col-sm-6">  
-                  <input type="text" class="form-control" name="valor">
+                  <input type="text" class="form-control dinheiro_mascara" name="valor" required>
                 </div>
               </div><!-- FECHAMENTO FORM_GROUP -->
 
               <div class="form-group">
                 <label for="data" class="col-sm-6">DATA</label>
                 <div class="col-sm-6">  
-                  <input type="date" class="form-control" name="data">
+                  <input type="date" class="form-control" name="data" required>
                 </div>
               </div><!-- FECHAMENTO FORM_GROUP -->
 
               <div class="form-group">
                 <label for="tipodeposito" class="col-sm-6">TIPO DE DEPOSITO</label>
                 <div class="col-sm-6">  
-                  <select class="form-control" name="tipodeposito">
+                  <select class="form-control" name="tipodeposito" required>
                     <option value="" disabled selected>SELECIONE</option>
                     <option value="">DINHEIRO</option>
-                    <option value="">BOLETO</option>
+                 <!--   <option value="">BOLETO</option>
                     <option value="">TRANSFÊRENCIA</option>
+                    -->
                   </select>
                 </div>
               </div><!-- FECHAMENTO FORM_GROUP -->
-
+              <!--
               <div class="form-group">
                 <label for="banco" class="col-sm-6">BANCO</label>
                 <div class="col-sm-6">  
@@ -52,14 +56,16 @@
                       <option value="">SMART</option>                
                     </select>
                 </div>
-              </div><!-- FECHAMENTO FORM_GROUP -->
+              </div>
+              -->
+              <!-- FECHAMENTO FORM_GROUP -->
 
               <div class="form-group text-right">
                 <div class="col-sm-6 col-sm-offset-6">  
-                  <input class="btn btn-primary form-control" value="DEPOSITAR">             
+                  <input type="submit" class="btn btn-primary form-control" value="DEPOSITAR">             
                 </div>
               </div><!-- FECHAMENTO FORM_GROUP -->
-
+               <input type="hidden" name="_token" value="{{ csrf_token() }}">
           </form>            
            
                        
@@ -146,7 +152,7 @@
       <!-- /.tab-pane -->
       <!-- Settings tab content -->
       <div class="tab-pane" id="control-sidebar-settings-tab">
-        <form method="post">
+        <form>
           <h3 class="control-sidebar-heading">General Settings</h3>
 
           <div class="form-group">

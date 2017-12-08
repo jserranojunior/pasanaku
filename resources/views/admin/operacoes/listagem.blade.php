@@ -49,7 +49,7 @@
                         <td class="text-maiuscula">
                                  {{$count++}}
                         </td>
-                        <td class="text-maiuscula">
+                        <td class="text-uppercase">
                             {{$item->tipo}}
                         </td>
                         <td>

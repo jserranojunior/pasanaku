@@ -21,7 +21,7 @@ class AdminController extends Controller
         $dados = array('notificacoes' =>  $notificacao);
 
     
-        return view('inicioadm')->with($dados);
+        return view('admin.inicio.inicioadm')->with($dados);
     }
 
     public function logout()

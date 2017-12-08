@@ -16,7 +16,7 @@ class Transacoes extends Migration
         Schema::create('transacoes', function (Blueprint $table) {    
             $table->increments('id');
             $table->bigInteger('id_user'); 
-            $table->float('valor')->nullable();
+            $table->string('valor')->nullable();
             $table->string('tipo');      
             $table->dateTime('data_efetuada');
             $table->dateTime('data_agendada');

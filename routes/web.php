@@ -11,8 +11,11 @@ Route::prefix('admin')->group(function() {
   });
 
 /* ADMINISTRAÇÃO */
-  Route::group(['as' => 'admin.','prefix' => 'admin/clientes', 'middleware' => ['auth:admin']],function(){
-  Route::get('/','Admin\Clientes\clientesController@index')->name('admin.clientes');
+  Route::group(['as' => 'admin.','prefix' => 'admin', 'middleware' => ['auth:admin']],function(){
+  Route::get('/clientes','Admin\Clientes\clientesController@index')->name('admin.clientes');
+
+  /* OPERAÇÕES  */
+  Route::get('/operacoes', 'Admin\Operacoes\operacoesController@index')->name('admin.operacoes');
 });
 
 /* LOGIN */

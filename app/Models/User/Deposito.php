@@ -15,7 +15,11 @@ class Deposito extends Model
 
     public function create($request)
     {
-        $request->valor = floatval($request->valor);         
+        
+        
+        $request->valor = realToFloat($request->valor);
+        
+   
         
         $dataAtual = date('Y-m-d');
         $dataCompleta = date('Y-m-d h:i:s', time());

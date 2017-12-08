@@ -15,6 +15,6 @@ class depositoController extends Controller
     public function create(Request $request){
         $dados = new Deposito();
         $dados = $dados->create($request);
-        return('Depositado com sucesso');
+        return view('deposito');
     }
 }

@@ -8598,3 +8598,10 @@ body.color-pasanaku {
     color: #fff;
 }
 
+.bg-light-blue, .label-primary, .modal-primary .modal-body {
+    background-color: #ed5f37 !important;
+}
+
+.text-maiuscula{
+    text-transform: uppercase;
+}

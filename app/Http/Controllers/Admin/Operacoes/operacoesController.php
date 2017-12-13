@@ -30,7 +30,7 @@ class operacoesController extends Controller
         $count = 1;
         $dados = array('dados' => $operacoes,'count' => $count, 'notificacoes' =>  $notificacao);
 
-        return view('admin\operacoes\listagem')->with($dados);       
+        return view('admin.operacoes.listagem')->with($dados);       
      
     }
 

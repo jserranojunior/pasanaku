@@ -16,6 +16,9 @@ Route::prefix('admin')->group(function() {
 
   /* OPERAÇÕES  */
   Route::get('/operacoes', 'Admin\Operacoes\operacoesController@index')->name('admin.operacoes');
+  Route::any('/operacoes/editar/{id}', 'Admin\Operacoes\operacoesController@edit')->name('admin.operacoes.edit');
+  Route::post('/operacoes/emitir', 'Admin\Operacoes\operacoesController@emitir')->name('admin.operacoes.emitir');
+  Route::post('/operacoes/excluir', 'Admin\Operacoes\operacoesController@excluir')->name('admin.operacoes.excluir');
 });
 
 /* LOGIN */

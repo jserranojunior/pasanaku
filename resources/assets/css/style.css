@@ -2,3 +2,7 @@
 .text-uppercase{
     text-transform: uppercase;
 }
+
+.mouse-point, .cursor-point{
+    cursor: pointer;
+}

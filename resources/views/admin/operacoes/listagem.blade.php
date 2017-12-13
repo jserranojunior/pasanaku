@@ -37,15 +37,14 @@
                     <th>
                         DATA
                     </th>
-                    <th>
-                        APROVAR
-                    </th>
+                    
                 </tr>
               </thead>
                 <tbody>
                 
                 @foreach($dados as $item)
-                    <tr>
+                
+                    <tr class="mouse-point" onclick="emitir({{$item->id}});">
                         <td class="text-maiuscula">
                                  {{$count++}}
                         </td>
@@ -61,10 +60,9 @@
                         <td>
                             <span class="data_mascara">{{$item->data_agendada}}</span>
                         </td>
-                        <td>
-                            <div class="btn btn-sm btn-primary">RECEBIDO</div>
-                        </td>
+                        
                     </tr> 
+                    
                 @endforeach
               </tbody>
               </table>
@@ -75,6 +73,17 @@
         </div>
      </section>  
  </div>
+
+ <script>
+        function emitir(id){
+    
+ var $url = 'operacoes/editar/' + id;
+ 
+  window.location = $url;
+ }
+
+        
+        </script>
 
 
 @endsection

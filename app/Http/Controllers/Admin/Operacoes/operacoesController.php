@@ -10,9 +10,8 @@ use App\Http\Controllers\Admin\Header\notificacoesController;
 class operacoesController extends Controller
 {
     public function emitir(Request $request){
-        $emitir = new operacoes();
-        $emitir = $emitir->emitir();
-        
+        return ("EMITINDO $request->id");
+
 
     }
 

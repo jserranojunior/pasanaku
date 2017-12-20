@@ -30,7 +30,6 @@ class Deposito extends Model
           'valor' => $request->valor,
           'tipo' => 'deposito',
           'data_agendada' => $request->data,
-          'data_efetuada' => $dataAtual,
           'pagamento_feito' =>false,
           'created_at' => $dataCompleta,
           'updated_at' => $dataCompleta,  

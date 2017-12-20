@@ -7,13 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 class Operacoes extends Model
 { 
     public function emitir($request)
-    {
-        /*
-        $dados = 
+    {   
         $id = $request->id;
-        $id_admin = $request->id_admin;
-        */
+        $dataAtual = date('Y-m-d h:i:s', time());
+        $id_admin = auth()->user()->id;  
+        
+        $dados = array('id_admin' => $id_admin, 'pagamento_feito' => 1, 'data_efetuada' => $dataAtual);
 
+        DB::table('transacoes')
+        ->take(1)
+        ->where('id', $id)
+        ->update($dados);       
     }
 
     public function index(){

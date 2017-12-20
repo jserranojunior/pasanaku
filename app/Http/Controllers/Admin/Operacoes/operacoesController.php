@@ -10,9 +10,12 @@ use App\Http\Controllers\Admin\Header\notificacoesController;
 class operacoesController extends Controller
 {
     public function emitir(Request $request){
-        return ("EMITINDO $request->id");
 
+       
+        $operacoes = new Operacoes();
+        $operacoes = $operacoes->emitir($request);
 
+        return redirect('/admin/operacoes');  
     }
 
     public function excluir(Request $request){

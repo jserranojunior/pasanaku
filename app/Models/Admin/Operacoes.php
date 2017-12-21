@@ -10,7 +10,8 @@ class Operacoes extends Model
     {   
         $id = $request->id;
         $dataAtual = date('Y-m-d h:i:s', time());
-        $id_admin = auth()->user()->id;  
+
+        $id_admin =  auth()->guard('admin')->user()->id;  
         
         $dados = array('id_admin' => $id_admin, 'pagamento_feito' => 1, 'data_efetuada' => $dataAtual);
 

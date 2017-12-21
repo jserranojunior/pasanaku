@@ -8,3 +8,7 @@ Adicionar tipo de transação ao extrato
 criar tabela de total ou fazer a soma
 Fazer tela de exibição de transações a serem aprovadas
 Fazer tela de resgate
+
+CORRIGIR DATA DE INPUT NO DATA_EFETUADA DA TABELA TRANSAÇOES QUE O HORARIO TA ERRADO
+
+COLOCAR MODEL DE SAIR NO BOTÃO LATERAL

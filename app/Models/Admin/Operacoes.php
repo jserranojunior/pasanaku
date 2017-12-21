@@ -11,9 +11,11 @@ class Operacoes extends Model
         $id = $request->id;
         $dataAtual = date('Y-m-d h:i:s', time());
 
+        $dataCompleta = date('Y-m-d h:i:s', time());
+
         $id_admin =  auth()->guard('admin')->user()->id;  
         
-        $dados = array('id_admin' => $id_admin, 'pagamento_feito' => 1, 'data_efetuada' => $dataAtual);
+        $dados = array('id_admin' => $id_admin, 'pagamento_feito' => 1, 'data_efetuada' => $dataAtual, 'updated_at' => $dataCompleta);
 
         DB::table('transacoes')
         ->take(1)

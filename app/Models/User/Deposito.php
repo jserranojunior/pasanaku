@@ -31,6 +31,7 @@ class Deposito extends Model
           'tipo' => 'deposito',
           'data_agendada' => $request->data,
           'pagamento_feito' =>false,
+          'data_efetuada' => $dataCompleta,
           'created_at' => $dataCompleta,
           'updated_at' => $dataCompleta,  
         );

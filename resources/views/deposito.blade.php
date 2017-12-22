@@ -24,19 +24,19 @@
                 </div>
               </div><!-- FECHAMENTO FORM_GROUP -->
 
+
               <div class="form-group">
                 <label for="data" class="col-sm-6">DATA</label>
                 <div class="col-sm-6">  
-                  <input type="date" class="form-control" name="data" required>
+                  <input type="date" class="form-control data-automatica" value="{{$dataAtual}}" name="data" required>
                 </div>
               </div><!-- FECHAMENTO FORM_GROUP -->
 
               <div class="form-group">
                 <label for="tipodeposito" class="col-sm-6">TIPO DE DEPOSITO</label>
                 <div class="col-sm-6">  
-                  <select class="form-control" name="tipodeposito" required>
-                    <option value="" disabled selected>SELECIONE</option>
-                    <option value="">DINHEIRO</option>
+                  <select class="form-control" name="tipodeposito" >
+                    <option value="" selected>DINHEIRO</option>
                  <!--   <option value="">BOLETO</option>
                     <option value="">TRANSFÊRENCIA</option>
                     -->

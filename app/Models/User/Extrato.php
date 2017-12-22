@@ -24,14 +24,17 @@ class Extrato extends Model
             if($dados->tipo == "deposito"){
             $total += $valor;
             $dados->tipo = "+";
-            }else{
-                $total -= $valor;    
-                $dados->tipo = "-";
             }
+
+           
 
             /* MUDANDO FORMATO DA DATA */
             $dados->data_efetuada = date('d/m/Y', strtotime($dados->data_efetuada));
         }
+
+        $total = number_format($total, 2,',','.');
+
+
         $dados = ['dados' =>  $select, 'total' => $total];
         return($dados);
     }

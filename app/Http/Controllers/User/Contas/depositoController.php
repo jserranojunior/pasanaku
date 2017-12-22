@@ -9,12 +9,14 @@ class depositoController extends Controller
 {
     public function index()
     {
-        return view('deposito');
+        $dataAtual = date('Y-m-d');       
+        $dados = array('dataAtual' => $dataAtual);        
+        return view('deposito')->with($dados);
     }
 
     public function create(Request $request){
         $dados = new Deposito();
         $dados = $dados->create($request);
-        return view('deposito');
+        return redirect('/deposito');
     }
 }

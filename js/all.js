@@ -651,3 +651,6 @@ $(document).ready(function(){
 });
 
     // FIM MASCARAS
+
+    dataAtual = date();
+    alert(dataAtual);

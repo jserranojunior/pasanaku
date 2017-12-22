@@ -35,7 +35,7 @@
                                 <td class="text-bold text-left">
                                 <h4>Total</h4>
                                 </td>
-                                <td class="text-right dinheiro_mascara">
+                                <td class="text-right ">
                                     <h4>{{$total}}</h4>
                                 </td>
                             </tr>

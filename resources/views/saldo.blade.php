@@ -19,8 +19,12 @@
                         </td>
                         <td class="text-right">
                             @foreach($dados as $item)
+                            @if($item->valor !== "")
                               {{$item->valor}}
-                            @endforeach
+                            @else
+                              0,00
+                          @endif
+                          @endforeach
                         </td>
                     </tr>
                                                                    
@@ -29,9 +33,15 @@
                         <h4  class="text-left">Total</h4>
                         </td>
                         <td class="text-right">
-                            <h4>  @foreach($dados as $item)
-                              {{$item->valor}}
-                            @endforeach</h4>
+                            <h4>  
+                              @foreach($dados as $item)
+                                @if($item->valor !== "")
+                                  {{$item->valor}}
+                                @else
+                                  0,00
+                              @endif
+                            @endforeach
+                          </h4>
                         </td>
                     </tr>
                 </tbody>

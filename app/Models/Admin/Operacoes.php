@@ -3,11 +3,17 @@
 namespace App\Models\Admin;
 use DB;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Admin\Saldo;
 
 class Operacoes extends Model
 { 
     public function emitir($request)
     {   
+        $saldo = new saldo();
+        $saldo = $saldo->create($request);
+
+        
+
         $id = $request->id;
         $dataAtual = date('Y-m-d h:i:s', time());
 
@@ -24,6 +30,7 @@ class Operacoes extends Model
     }
 
     public function index(){
+
         $select = DB::table('transacoes as T')
         ->join('users as U','T.id_user','=', 'U.id')
         ->select('T.id as id', 'T.id_user', 'valor', 'data_agendada','pagamento_feito', 'tipo', 'name')

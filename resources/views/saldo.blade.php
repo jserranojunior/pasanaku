@@ -18,7 +18,9 @@
                             VALOR 
                         </td>
                         <td class="text-right">
-                            R$0,00
+                            @foreach($dados as $item)
+                              {{$item->valor}}
+                            @endforeach
                         </td>
                     </tr>
                                                                    
@@ -27,7 +29,7 @@
                         <h4  class="text-left">Total</h4>
                         </td>
                         <td class="text-right">
-                            <h4>R$0,00</h4>
+                            <h4> {{$item->valor}}</h4>
                         </td>
                     </tr>
                 </tbody>
@@ -35,9 +37,6 @@
             </div>
         </div>
         </div>  
-     
-        
-      
     </section>
 
     <!-- Main content -->

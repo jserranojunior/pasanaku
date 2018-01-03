@@ -50,9 +50,12 @@ Route::group(['as' => 'usuario.', 'middleware' => ['auth:web']],function(){
   Route::get('/deposito', 'User\Contas\depositoController@index');
   Route::post('/deposito/novo', 'User\Contas\depositoController@create');
 
+  /* saldo */  
+  Route::get('/saldo', 'User\Contas\saldoController@index');
+
   /* ARRUMAR */
   Route::get('/cliente', function () {return view('iniciocliente');});               
-  Route::get('/saldo', function () { return view('saldo'); });       
+     
   Route::get('/resgate', function () {return view('resgate');}); 
 
 });

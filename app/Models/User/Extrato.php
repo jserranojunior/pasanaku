@@ -24,7 +24,11 @@ class Extrato extends Model
             if($dados->tipo == "deposito"){
             $total += $valor;
             $dados->tipo = "+";
-            }
+            }elseif($dados->tipo == "resgate"){
+                $total -= $valor;
+                $dados->tipo = "-";
+                }
+            
 
            
 

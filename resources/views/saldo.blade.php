@@ -19,7 +19,7 @@
                         </td>
                         <td class="text-right">
                             @foreach($dados as $item)
-                            @if($item->valor !== "")
+                            @if($item->valor > "0")
                               {{$item->valor}}
                             @else
                               0,00
@@ -35,7 +35,7 @@
                         <td class="text-right">
                             <h4>  
                               @foreach($dados as $item)
-                                @if($item->valor !== "")
+                                @if($item->valor > "0")
                                   {{$item->valor}}
                                 @else
                                   0,00

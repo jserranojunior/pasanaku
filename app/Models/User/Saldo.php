@@ -17,11 +17,22 @@ class Saldo extends Model
         ->orderBy('id', 'desc')
         ->get();
 
+        $valor = array('valor' => "0,00");
+        $existe_saldo = false;
+
         foreach($saldo as $item){
-            $item->valor = number_format($item->valor, 2, '.', ',');
+            $valor = number_format($item->valor, 2, ',', '.');  
+            $valor = array('valor' => $valor);
+            $existe_saldo = true;                         
         }
 
-        return($saldo);        
+        if($existe_saldo){
+            $saldo = $valor;
+        }else{
+            $saldo = $valor;
+        }
+         
+     return($saldo);        
     }
 
     

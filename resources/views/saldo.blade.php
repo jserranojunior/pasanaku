@@ -18,13 +18,8 @@
                             VALOR 
                         </td>
                         <td class="text-right">
-                            @foreach($dados as $item)
-                            @if($item->valor > "0")
-                              {{$item->valor}}
-                            @else
-                              0,00
-                          @endif
-                          @endforeach
+                          
+                           {{$dados['valor']}}
                         </td>
                     </tr>
                                                                    
@@ -34,13 +29,8 @@
                         </td>
                         <td class="text-right">
                             <h4>  
-                              @foreach($dados as $item)
-                                @if($item->valor > "0")
-                                  {{$item->valor}}
-                                @else
-                                  0,00
-                              @endif
-                            @endforeach
+
+                                {{$dados['valor']}}
                           </h4>
                         </td>
                     </tr>

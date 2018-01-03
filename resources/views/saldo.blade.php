@@ -29,7 +29,9 @@
                         <h4  class="text-left">Total</h4>
                         </td>
                         <td class="text-right">
-                            <h4> {{$item->valor}}</h4>
+                            <h4>  @foreach($dados as $item)
+                              {{$item->valor}}
+                            @endforeach</h4>
                         </td>
                     </tr>
                 </tbody>

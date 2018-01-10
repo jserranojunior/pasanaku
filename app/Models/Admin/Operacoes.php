@@ -10,9 +10,7 @@ class Operacoes extends Model
     public function emitir($request)
     {   
         $saldo = new saldo();
-        $saldo = $saldo->create($request);
-
-        
+        $saldo = $saldo->create($request);       
 
         $id = $request->id;
         $dataAtual = date('Y-m-d h:i:s', time());

@@ -56,7 +56,8 @@ Route::group(['as' => 'usuario.', 'middleware' => ['auth:web']],function(){
   /* ARRUMAR */
   Route::get('/cliente', function () {return view('iniciocliente');});               
      
-  Route::get('/resgate', function () {return view('resgate');}); 
+  Route::get('/resgate', 'User\Contas\resgateController@index');
+  Route::post('/resgate/novo', 'User\Contas\resgateController@create');
 
 });
 /* FIM ROTAS CLIENTES */

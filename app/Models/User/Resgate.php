@@ -5,7 +5,7 @@ namespace App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use DB;
 
-class Deposito extends Model
+class Resgate extends Model
 {
     public function index()
     {
@@ -25,7 +25,7 @@ class Deposito extends Model
         $dados = array(
           'id_user' => $id,
           'valor' => $request->valor,
-          'tipo' => 'deposito',
+          'tipo' => 'resgate',
           'data_agendada' => $request->data,
           'pagamento_feito' =>false,
           'data_efetuada' => $dataCompleta,

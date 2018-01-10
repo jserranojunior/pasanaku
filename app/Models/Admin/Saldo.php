@@ -19,6 +19,7 @@ class Saldo extends Model
         foreach($transacoes as $item){
             $valor = $item->valor;
             $id_user = $item->id_user;
+            $tipo_transacao = $item->tipo;
         }
 
         $saldos = DB::table('saldos')
@@ -32,17 +33,17 @@ class Saldo extends Model
 
         foreach($saldos as $item){
             $saldo = $item->valor;
-        }
-
-               
-     
+        }              
         
-        $novo_valor_saldo = $saldo + $valor;
+        if($tipo_transacao == "deposito"){
+            $novo_valor_saldo = $saldo + $valor;
+        }elseif($tipo_transacao == "resgate"){
+            $novo_valor_saldo = $saldo - $valor;    
+        }
 
         $novo_valor_saldo = number_format( $novo_valor_saldo, 2, '.','');
         
        
-
         $dataAtual = date('Y-m-d h:i:s', time());
         $dataCompleta = date('Y-m-d h:i:s', time());
 

@@ -47,11 +47,10 @@ desired effect
     <!-- Logo -->
     <a href="#" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>C</b>P</span>
+      <span class="logo-mini"><b>C</b>S</span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg">
-      <b>CONTA <br>
-      Pasanaku - Familia Feliz (PFF)</span>
+      CONTA <b> SMART </b></span>
     </a>
 
     <!-- Header Navbar -->
@@ -187,13 +186,27 @@ desired effect
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header text-center">MENU</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="{{URL('/')}}"><i class="fa fa-home"></i> <span>INÍCIO</span></a></li>
+        <li class="active"><a href="{{URL('/cliente')}}"><i class="fa fa-home"></i> <span>INÍCIO</span></a></li>
+
+        <li class=""><a href="#"><i class="fa fa-money "></i> <span>SMARTCOIN</span></a></li>
+        
+        <li class="treeview">
+          <a href="#">
+            <i class="fa  fa-bar-chart"></i>
+            <span>PASANAKU INVEST</span> 
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>           
+          </a>
+          <ul class="treeview-menu">
+            
         <li><a href="{{URL('saldo')}}"><i class="fa fa-university"></i> <span>SALDO</span></a></li>
         <li><a href="{{URL('extrato')}}"><i class="fa fa-line-chart"></i> <span>EXTRATO</span></a></li>
         <li><a href="{{URL('deposito')}}"><i class="fa fa-plus-square-o"></i> <span>DEPOSITO</span></a></li>
         <li><a href="{{URL('resgate')}}"><i class="fa fa-life-ring"></i> <span>RESGATE</span></a></li>
         <li><a href="{{URL('#')}}"><i class="fa fa-users"></i> <span>GRUPO</span></a></li>
-       
+          </ul>
+        </li>
         
         <li><a href="{{Route('logout')}}"><i class="fa fa-power-off"></i> <span>SAIR</span></a></li>
 

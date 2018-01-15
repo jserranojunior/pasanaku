@@ -73,7 +73,7 @@
           </div>
         
           <div class="col-lg-8 mx-auto">
-            <p class="text-faded mb-5">Relalizando sonhos.</p>
+            <p class="text-faded mb-5">Realizando sonhos.</p>
             <a class="btn btn-primary btn-xl js-scroll-trigger" href="{{URL('/register')}}">CADASTRE</a>
           </div>
         </div>

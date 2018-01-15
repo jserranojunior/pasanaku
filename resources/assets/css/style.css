@@ -1,8 +1,5 @@
+.text-uppercase {
+  text-transform: uppercase; }
 
-.text-uppercase{
-    text-transform: uppercase;
-}
-
-.mouse-point, .cursor-point{
-    cursor: pointer;
-}
+.mouse-point, .cursor-point {
+  cursor: pointer; }

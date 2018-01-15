@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Pasanaku | Início </title>
+  <title>Smart | Início </title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
    <link href="{{ url('css/all.css') }}" rel="stylesheet">
@@ -21,8 +21,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <header class="main-header">
  
     <a href="#" class="logo">
-      <span class="logo-mini"><b>P</b>K</span>
-      <span class="logo-lg"><b>PASANAKU</span>
+      <span class="logo-mini"><b>C</b>S</span>
+      <span class="logo-lg"><b>SMART</span>
     </a>
 
 
@@ -124,7 +124,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       Realizando sonhos
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2017 <a href="#">Pasanaku</a>.</strong>
+    <strong>Copyright &copy; 2017 <a href="#">SMART</a>.</strong>
   </footer>
 
   <!-- Control Sidebar -->

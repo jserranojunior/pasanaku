@@ -15,9 +15,18 @@
     <!-- Main content -->
     <section class="content container-fluid">
 
-      <!--------------------------
-        | Your Page Content Here |
-        -------------------------->
+  
+      
+
+
+
+
+
+
+
+
+
+
 
     </section>
     <!-- /.content -->
@@ -31,7 +40,7 @@
       Realizando sonhos
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2017 <a href="#">Pasanaku</a>.</strong>
+    <strong>Copyright &copy; 2017 <a href="#">SMART</a>.</strong>
   </footer>
 
   <!-- Control Sidebar -->

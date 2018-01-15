@@ -56,7 +56,6 @@ class ClassLoader
     private $classMapAuthoritative = false;
     private $missingClasses = array();
     private $apcuPrefix;
-    
 
     public function getPrefixes()
     {

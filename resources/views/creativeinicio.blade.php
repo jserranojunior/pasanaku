@@ -85,7 +85,7 @@
       <div class="container">
           <div class="row">
               <div class="col-lg-12 text-center">
-                  <h2 class="section-heading">SERVIÇOS</h2>
+                  <h2 class="section-heading">CONTA SMART</h2>
                   <hr class="primary">
               </div>
           </div>
@@ -96,21 +96,21 @@
                   <div class="service-box">
                     <img class="img-fluid logo-inicial" src="{{URL('/img/logosmartcoin.png')}}" alt="">
                       <h3>SMARTCOIN</h3>
-                      <p class="text-muted">Nossa moeda digital.</p>
+                      <p class="text-muted">Investimento Inteligente.</p>
                   </div>
               </div>
               <div class="col-lg-4 col-md-4 col-xs-12  text-center">
                   <div class="service-box">
                     <img class="img-fluid logo-inicial" src="{{URL('/img/logopasanaku.png')}}" alt="">
                       <h3>PASANAKU INVEST</h3>
-                      <p class="text-muted">Sistema de investimento!</p>
+                      <p class="text-muted">Poupança segura e sem burocracia.</p>
                   </div>
               </div>
               <div class="col-lg-4 col-md-4 col-xs-12  text-center">
                   <div class="service-box">
                     <img class="img-fluid logo-inicial" src="{{URL('/img/logovisa.png')}}" alt="">
                       <h3>SMART VISA</h3>
-                      <p class="text-muted">Nosso sistema de contas.</p>
+                      <p class="text-muted">Banco digital.</p>
                   </div>
               </div>
               

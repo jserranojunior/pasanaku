@@ -68,7 +68,7 @@
       Realizando sonhos
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2017 <a href="#">Pasanaku</a>.</strong>
+    <strong>Copyright &copy; 2017 <a href="#">SMART</a>.</strong>
   </footer>
 
   <!-- Control Sidebar -->

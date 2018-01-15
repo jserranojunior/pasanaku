@@ -14,9 +14,11 @@ gulp.task('scripts', function() {
         './resources/assets/js/jquery.js',
         './resources/assets/js/bootstrap.js',
         './resources/assets/js/adminlte.js',
-        './resources/assets/js/internetexplore.js',
-        './resources/assets/js/jquerymask.js',
+        './resources/assets/js/internetexplore.js',        
+        './resources/assets/js/jquerymask.js',            
         './resources/assets/js/funcoes.js'
+        
+        
       ])
       .pipe(concat('all.js'))
       .pipe(gulp.dest('./js/'));
@@ -36,23 +38,17 @@ gulp.task('scripts', function() {
     return gulp.src([
         './resources/assets/css/bootstrap.css',
         './resources/assets/css/fontawesome.css',
-        './resources/assets/css/adminlte.css',
+        './resources/assets/css/adminlte.css',       
         './resources/assets/css/skin-pasanaku.css',
-        './resources/assets/css/style.css',
+        './resources/assets/css/style.css'
+        
       ])
       .pipe(concat('all.css'))
       .pipe(gulp.dest('./css/'));
   });
   
 
-  gulp.task('watch', function () {
-
-    browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    });
-
+  gulp.task('watch', function () {    
     gulp.watch('./resources/assets/sass/*.scss', ['sass']);
     gulp.watch('./resources/assets/css/*.css', ['styles']);
     gulp.watch('./resources/assets/js/*.js', ['scripts']);

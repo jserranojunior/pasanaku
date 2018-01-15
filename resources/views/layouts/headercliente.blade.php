@@ -188,25 +188,28 @@ desired effect
         <!-- Optionally, you can add icons to the links -->
         <li class="active"><a href="{{URL('/cliente')}}"><i class="fa fa-home"></i> <span>INÍCIO</span></a></li>
 
-        <li class=""><a href="#"><i class="fa fa-money "></i> <span>SMARTCOIN</span></a></li>
-        
         <li class="treeview">
-          <a href="#">
-            <i class="fa  fa-bar-chart"></i>
-            <span>PASANAKU INVEST</span> 
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>           
-          </a>
-          <ul class="treeview-menu">
-            
-        <li><a href="{{URL('saldo')}}"><i class="fa fa-university"></i> <span>SALDO</span></a></li>
-        <li><a href="{{URL('extrato')}}"><i class="fa fa-line-chart"></i> <span>EXTRATO</span></a></li>
-        <li><a href="{{URL('deposito')}}"><i class="fa fa-plus-square-o"></i> <span>DEPOSITO</span></a></li>
-        <li><a href="{{URL('resgate')}}"><i class="fa fa-life-ring"></i> <span>RESGATE</span></a></li>
-        <li><a href="{{URL('#')}}"><i class="fa fa-users"></i> <span>GRUPO</span></a></li>
-          </ul>
-        </li>
+            <a href="#">
+              <i class="fa  fa-bar-chart"></i>
+              <span>PASANAKU INVEST</span> 
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>           
+            </a>
+            <ul class="treeview-menu">
+              
+          <li><a href="{{URL('saldo')}}"><i class="fa fa-university"></i> <span>SALDO</span></a></li>
+          <li><a href="{{URL('extrato')}}"><i class="fa fa-line-chart"></i> <span>EXTRATO</span></a></li>
+          <li><a href="{{URL('deposito')}}"><i class="fa fa-plus-square-o"></i> <span>DEPOSITO</span></a></li>
+          <li><a href="{{URL('resgate')}}"><i class="fa fa-life-ring"></i> <span>RESGATE</span></a></li>
+          <li><a href="{{URL('#')}}"><i class="fa fa-users"></i> <span>GRUPO</span></a></li>
+            </ul>
+          </li>
+
+        <li class=""><a href="#"><i class="fa fa-money "></i> <span>SMARTCOIN</span></a></li>
+        <li class=""><a target="_blank" href="https://app.conta.mobi/login"><i class="fa fa-university"></i> <span>SMART VISA</span></a></li>  
+
+        
         
         <li><a href="{{Route('logout')}}"><i class="fa fa-power-off"></i> <span>SAIR</span></a></li>
 

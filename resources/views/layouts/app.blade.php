@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Conta Pasanaku</title>
+    <title>SMART</title>
 
     <!-- Styles -->
     <link href="{{ url('css/all.css') }}" rel="stylesheet">
@@ -32,7 +32,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                    Conta Pasanaku
+                    CONTA SMART
                     </a>
                 </div>
 

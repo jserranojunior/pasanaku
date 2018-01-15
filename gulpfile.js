@@ -47,7 +47,11 @@ gulp.task('scripts', function() {
 
   gulp.task('watch', function () {
 
-    
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
 
     gulp.watch('./resources/assets/sass/*.scss', ['sass']);
     gulp.watch('./resources/assets/css/*.css', ['styles']);

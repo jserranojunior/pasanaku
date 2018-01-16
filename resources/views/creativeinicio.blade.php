@@ -77,46 +77,32 @@
             <a class="btn btn-primary btn-xl js-scroll-trigger" href="{{URL('/register')}}">CADASTRE</a>
           </div>
         </div>
+        <div class="row  row-servicos">
+            <div class="col-md-4">
+                <img class="img-fluid logo-inicial" src="{{URL('/img/logovisa.png')}}" alt="">
+                  <h3>SMART VISA</h3>
+                  <p class="text-muted">Nosso sistema de contas.</p>
+              </div>
+          
+          <div class="col-md-4">
+            <img class="img-fluid logo-inicial" src="{{URL('/img/logopasanaku.png')}}" alt="">
+                      <h3>PASANAKU INVEST</h3>
+                      <p class="text-muted">Sistema de investimento!</p>
+            
+          </div>
+
+          <div class="col-md-4">
+              <img class="img-fluid logo-inicial" src="{{URL('/img/logosmartcoin.png')}}" alt="">
+                        <h3>SMARTCOIN</h3>
+                        <p class="text-muted">Nossa moeda digital.</p>
+                    
+            </div>
+          
+        </div>
       </div>
     </header>
 
 
-    <section id="services">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-12 text-center">
-                  <h2 class="section-heading">SERVIÇOS</h2>
-                  <hr class="primary">
-              </div>
-          </div>
-      </div>
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-4 col-md-4 col-xs-12 text-center">
-                  <div class="service-box">
-                    <img class="img-fluid logo-inicial" src="{{URL('/img/logosmartcoin.png')}}" alt="">
-                      <h3>SMARTCOIN</h3>
-                      <p class="text-muted">Nossa moeda digital.</p>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-xs-12  text-center">
-                  <div class="service-box">
-                    <img class="img-fluid logo-inicial" src="{{URL('/img/logopasanaku.png')}}" alt="">
-                      <h3>PASANAKU INVEST</h3>
-                      <p class="text-muted">Sistema de investimento!</p>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-xs-12  text-center">
-                  <div class="service-box">
-                    <img class="img-fluid logo-inicial" src="{{URL('/img/logovisa.png')}}" alt="">
-                      <h3>SMART VISA</h3>
-                      <p class="text-muted">Nosso sistema de contas.</p>
-                  </div>
-              </div>
-              
-          </div>
-      </div>
-  </section>
 
 
     <!-- Bootstrap core JavaScript -->

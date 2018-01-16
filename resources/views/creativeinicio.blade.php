@@ -74,56 +74,18 @@
             <a class="btn btn-primary btn-xl js-scroll-trigger" href="{{URL('/register')}}">CADASTRE</a>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-    </header>
-
-
-    <section id="services">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-12 text-center">
-                  <h2 class="section-heading">CONTA SMART</h2>
-                  <hr class="primary">
-              </div>
-          </div>
-      </div> 
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-4 col-md-4 col-xs-12 text-center">
-                  <div class="service-box">
-                    <img class="img-fluid logo-inicial" src="{{URL('/img/logosmartcoin.png')}}" alt="">
-                      <h3>SMARTCOIN</h3>
-                      <p class="text-muted">Investimento Inteligente.</p>
-                  </div>
-=======
         <div class="row  row-servicos">
             <div class="col-md-4">
                 <img class="img-fluid logo-inicial" src="{{URL('/img/logovisa.png')}}" alt="">
                   <h3>SMART VISA</h3>
                   <p class="text-muted">Nosso sistema de contas.</p>
->>>>>>> 7781038a2d2d03a367aa26ec44aa3c4fc0e4391c
               </div>
           
           <div class="col-md-4">
             <img class="img-fluid logo-inicial" src="{{URL('/img/logopasanaku.png')}}" alt="">
                       <h3>PASANAKU INVEST</h3>
-<<<<<<< HEAD
-                      <p class="text-muted">Poupança segura e sem burocracia.</p>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-xs-12  text-center">
-                  <div class="service-box">
-                    <img class="img-fluid logo-inicial" src="{{URL('/img/logovisa.png')}}" alt="">
-                      <h3>SMART VISA</h3>
-                      <p class="text-muted">Banco digital.</p>
-                  </div>
-              </div>
-              
-=======
                       <p class="text-muted">Sistema de investimento!</p>
             
->>>>>>> 7781038a2d2d03a367aa26ec44aa3c4fc0e4391c
           </div>
 
           <div class="col-md-4">

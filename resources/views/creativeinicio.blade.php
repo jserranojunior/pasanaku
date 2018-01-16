@@ -48,10 +48,7 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="{{URL('/register')}}">CADASTRO</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">SERVIÇOS</a>
-            </li>
-            
+                        
             <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="{{url('/admin/login')}}">ADMINISTRAÇÃO</a>
             </li>

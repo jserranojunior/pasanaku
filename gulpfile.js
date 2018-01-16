@@ -52,3 +52,5 @@ gulp.task('scripts', function() {
     gulp.watch('./resources/assets/css/*.css', ['styles']);
     gulp.watch('./resources/assets/js/*.js', ['scripts']);
   });
+
+  

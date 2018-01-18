@@ -78,20 +78,20 @@
             <div class="col-md-4">
                 <img class="img-fluid logo-inicial" src="{{URL('/img/logovisa.png')}}" alt="">
                   <h3>SMART VISA</h3>
-                  <p class="text-muted">Nosso sistema de contas.</p>
+                  <p class="text-muted">Banco digital</p>
               </div>
           
           <div class="col-md-4">
             <img class="img-fluid logo-inicial" src="{{URL('/img/logopasanaku.png')}}" alt="">
                       <h3>PASANAKU INVEST</h3>
-                      <p class="text-muted">Sistema de investimento!</p>
+                      <p class="text-muted">Poupança segura e sem burocracia</p>
             
           </div>
 
           <div class="col-md-4">
               <img class="img-fluid logo-inicial" src="{{URL('/img/logosmartcoin.png')}}" alt="">
                         <h3>SMARTCOIN</h3>
-                        <p class="text-muted">Nossa moeda digital.</p>
+                        <p class="text-muted">Investimento inteligente</p>
                     
             </div>
           

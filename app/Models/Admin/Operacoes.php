@@ -7,6 +7,14 @@ use App\Models\Admin\Saldo;
 
 class Operacoes extends Model
 { 
+    public function excluir($id){
+        DB::table('transacoes')
+        ->where('id', $id)
+        ->take(1)
+        ->delete();
+    }
+
+
     public function emitir($request)
     {   
         $saldo = new saldo();

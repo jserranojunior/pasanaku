@@ -15,12 +15,12 @@
             <div class="body-box">
             <div class="col-md-offset-4 col-md-4">
 
-           <form action="{{url('/resgate/novo')}}" method="post" class="form-horizontal">
+           <form action="{{url('/resgate/novo')}}" method="post" name="formresgate" id="formresgate" class="form-horizontal">
              
               <div class="form-group ">
                 <label for="valor" class="col-sm-6 ">VALOR</label>
                 <div class="col-sm-6">  
-                  <input type="text" class="form-control dinheiro_mascara" name="valor" required>
+                  <input type="text" class="form-control dinheiro_mascara" id="valor" name="valor" required>
                 </div>
               </div><!-- FECHAMENTO FORM_GROUP -->
 
@@ -62,13 +62,50 @@
 
               <div class="form-group text-right">
                 <div class="col-sm-6 col-sm-offset-6">  
-                  <input type="submit" class="btn btn-primary form-control" value="RESGATE">             
+                  <div  type="submit" class="btn btn-primary form-control" onclick="submit();"> RESGATE </div>       
                 </div>
               </div><!-- FECHAMENTO FORM_GROUP -->
                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+               <input type="hidden" id="valorSaldo" name="valorSaldo" value="{{$valorSaldo}}">            
+              
           </form>            
            
-                       
+                       <script>
+
+                          function moedaParaNumero(valor)
+                          {
+                              return isNaN(valor) == false ? parseFloat(valor) :   parseFloat(valor.replace("R$","").replace(".","").replace(",","."));
+                          }
+                          
+                            
+                                function submit(){
+                                  var valorSaldo = document.getElementById("valorSaldo").value;
+                                  var valor = document.getElementById("valor").value;
+                                  
+
+                                  valorSaldo = moedaParaNumero(valorSaldo);
+                                  valor = moedaParaNumero(valor);
+
+                                  var totalResgate = valorSaldo - valor;
+
+                                  
+                                  if(totalResgate >= 0){
+                                    document.forms['formresgate'].submit();
+                                  }else{
+                                    alert("Valor menor do que o saldo em conta")
+                                  }
+
+                                }
+                       </script>
+
+                       <!-- /*
+                       alert(valorSaldo + " + " + valor + " = " + totalResgate);
+
+
+                      alert(valorSaldo); 
+                                                   
+                   
+                */-->
 
             <!-- DIV PARA CENTRALIZAR -->
         </div>  <!-- END BODY BOX -->

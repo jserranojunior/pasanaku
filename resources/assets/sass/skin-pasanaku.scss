@@ -1,5 +1,19 @@
+$primary: #ff4d00;
+$primaryHover: #FF5F19;
+$black: #2f2e36;
+
+.hr-inicio {
+    max-width: 50px;
+    border-width: 3px;
+    border-color: #e52c22; 
+}
+
+.body-color-inicio{
+    background-color: $primary;
+}
+
 .skin-blue .main-header .navbar {
-    background-color: #e52c22
+    background-color: $primary
 }
 .skin-blue .main-header .navbar .nav>li>a {
     color: #fff
@@ -25,7 +39,7 @@
     color: #fff
 }
 .skin-blue .main-header .navbar .sidebar-toggle:hover {
-    background-color: #c23a33;
+    background-color: $primaryHover;
 }
 @media (max-width: 767px) {
     .skin-blue .main-header .navbar .dropdown-menu li.divider {
@@ -35,11 +49,11 @@
         color: #fff
     }
     .skin-blue .main-header .navbar .dropdown-menu li a:hover {
-        background: #e52c22
+        background: $primary
     }
 }
 .skin-blue .main-header .logo {
-    background-color: #e52c22;
+    background-color: $primary;
     color: #fff;
     border-bottom: 0 solid transparent
 }
@@ -47,7 +61,7 @@
     background-color: #357ca5
 }
 .skin-blue .main-header li.user-header {
-    background-color: #e52c22
+    background-color: $primary
 }
 .skin-blue .content-header {
     background: transparent
@@ -75,7 +89,7 @@
     background: #1e282c
 }
 .skin-blue .sidebar-menu>li.active>a {
-    border-left-color: #e52c22
+    border-left-color: $primary
 }
 .skin-blue .sidebar-menu>li>.treeview-menu {
     margin: 0 1px;
@@ -129,33 +143,33 @@
     border-bottom-left-radius: 0
 }
 .skin-blue.layout-top-nav .main-header>.logo {
-    background-color: #e52c22;
+    background-color: $primary;
     color: #fff;
     border-bottom: 0 solid transparent
 }
 .skin-blue.layout-top-nav .main-header>.logo:hover {
-    background-color: #e52c22;
+    background-color: $primary;
 }
 
 .skin-blue .main-header .logo:hover {
-    background-color: #e52c22;
+    background-color: $primary;
 }
 
 .btn-primary, .btn-primary:focus{
-    background-color: #e52c22;
+    background-color: $primary;
     border-color: #b75539;
 }
 
 .btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, 
 .btn-primary:active:focus, .btn-primary:active:hover, 
 .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover, .btn-primary:hover{
-    background-color: #c23a33;
+    background-color: $primaryHover;
  
     border-color: #b75539;
 }
 
 body.color-pasanaku {
-    background-color: #e52c22;
+    background-color: $primary;
 }
 
 .configdiv {border: 1px solid #DDDDDD;
@@ -174,18 +188,79 @@ body.color-pasanaku {
 }
 
 .navbar-default {
-    background-color: #e52c22;
-    border-color: #eeeeee;
+    background-color: $primary;
+    border-color: $primary;
 }
 
 .navbar-default .navbar-brand {
     color: #fff;
 }
 
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+
+.navbar-default:hover, 
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
+    color: $black;
+}
+
+.row-espaco{
+    margin-top:50px;
+}
+
+
+.navbar-default {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #e52c22;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
 .bg-light-blue, .label-primary, .modal-primary .modal-body {
-    background-color: #e52c22 !important;
+    background-color: $primary !important;
 }
 
 .border-top-color {
-    background-color: #e52c22;
+    background-color: $primary;
 }
+
+
+
+.btn-inicial {
+    padding: 1rem 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+        border-top-color: currentcolor;
+        border-right-color: currentcolor;
+        border-bottom-color: currentcolor;
+        border-left-color: currentcolor;
+    border-radius: 300px;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    background-color: $primaryHover
+    
+}
+.btn-inicial:hover{
+    background-color: $black;
+}
+
+
+@media (min-width: 992px) {
+    .h-titulo {
+        font-size: 3rem; }
+}
+
+@media (min-width: 992px) {
+    
+        .h-titulo {
+            font-size: 5rem; }
+        
+    }
+
+    @media (min-width: 1200px) {
+        .h-titulo{
+          font-size: 7rem; 
+        }
+    }    

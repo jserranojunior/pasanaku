@@ -19,7 +19,10 @@ class operacoesController extends Controller
     }
 
     public function excluir(Request $request){
-        return ("EXCLUINDO $request->id");
+        $operacoes = new Operacoes();
+        $operacoes = $operacoes->excluir($request->id);
+
+        return redirect('/admin/operacoes');  
     }
 
 

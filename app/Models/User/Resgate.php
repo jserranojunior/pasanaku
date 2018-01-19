@@ -9,8 +9,19 @@ class Resgate extends Model
 {
     public function index()
     {
-        $dados = array("valor" => 17);
-        return($dados);
+        $id = auth()->user()->id;  
+        $dados =  DB::table('saldos')
+        ->select('valor')
+        ->where('id_user', $id)
+        ->take(1)
+        ->orderBy('id', 'desc')
+        ->get();
+
+        foreach($dados as $item){
+           $valor = $item->valor;
+        }
+
+        return($valor);
     }
 
     public function create($request)

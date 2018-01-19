@@ -4,13 +4,21 @@ namespace App\Http\Controllers\User\Contas;
 use App\Models\User\Resgate;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use DB;
 
 class resgateController extends Controller
 {
     public function index()
     {
+
+        $resgate = new Resgate();
+        $valor = $resgate->index();
+
+      
+
+
         $dataAtual = date('Y-m-d');       
-        $dados = array('dataAtual' => $dataAtual);        
+        $dados = array('valorSaldo' => $valor, 'dataAtual' => $dataAtual);        
         return view('resgate')->with($dados);
     }
 

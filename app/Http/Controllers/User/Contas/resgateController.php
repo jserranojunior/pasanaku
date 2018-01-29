@@ -19,7 +19,7 @@ class resgateController extends Controller
 
         $dataAtual = date('Y-m-d');       
         $dados = array('valorSaldo' => $valor, 'dataAtual' => $dataAtual);        
-        return view('resgate')->with($dados);
+        return view('user.pasanaku.resgate')->with($dados);
     }
 
     public function create(Request $request){

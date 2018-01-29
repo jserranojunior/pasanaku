@@ -1,7 +1,45 @@
 <?php
 
+/*
+ * This file is part of Composer.
+ *
+ * (c) Nils Adermann <naderman@naderman.de>
+ *     Jordi Boggiano <j.boggiano@seld.be>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Composer\Autoload;
 
+/**
+ * ClassLoader implements a PSR-0, PSR-4 and classmap class loader.
+ *
+ *     $loader = new \Composer\Autoload\ClassLoader();
+ *
+ *     // register classes with namespaces
+ *     $loader->add('Symfony\Component', __DIR__.'/component');
+ *     $loader->add('Symfony',           __DIR__.'/framework');
+ *
+ *     // activate the autoloader
+ *     $loader->register();
+ *
+ *     // to enable searching the include path (eg. for PEAR packages)
+ *     $loader->setUseIncludePath(true);
+ *
+ * In this example, if you try to use a class in the Symfony\Component
+ * namespace or one of its children (Symfony\Component\Console for instance),
+ * the autoloader will first look for the class under the component/
+ * directory, and it will then fallback to the framework/ directory if not
+ * found before giving up.
+ *
+ * This class is loosely based on the Symfony UniversalClassLoader.
+ *
+ * @author Fabien Potencier <fabien@symfony.com>
+ * @author Jordi Boggiano <j.boggiano@seld.be>
+ * @see    http://www.php-fig.org/psr/psr-0/
+ * @see    http://www.php-fig.org/psr/psr-4/
+ */
 class ClassLoader
 {
     // PSR-4
@@ -17,7 +55,6 @@ class ClassLoader
     private $classMap = array();
     private $classMapAuthoritative = false;
     private $missingClasses = array();
-    private $apcuPrefix;
 
     public function getPrefixes()
     {
@@ -48,7 +85,9 @@ class ClassLoader
         return $this->classMap;
     }
 
-   
+    /**
+     * @param array $classMap Class to filename map
+     */
     public function addClassMap(array $classMap)
     {
         if ($this->classMap) {
@@ -58,7 +97,14 @@ class ClassLoader
         }
     }
 
-  
+    /**
+     * Registers a set of PSR-0 directories for a given prefix, either
+     * appending or prepending to the ones previously set for this prefix.
+     *
+     * @param string       $prefix  The prefix
+     * @param array|string $paths   The PSR-0 root directories
+     * @param bool         $prepend Whether to prepend the directories
+     */
     public function add($prefix, $paths, $prepend = false)
     {
         if (!$prefix) {
@@ -226,26 +272,6 @@ class ClassLoader
     }
 
     /**
-     * APCu prefix to use to cache found/not-found classes, if the extension is enabled.
-     *
-     * @param string|null $apcuPrefix
-     */
-    public function setApcuPrefix($apcuPrefix)
-    {
-        $this->apcuPrefix = function_exists('apcu_fetch') && ini_get('apc.enabled') ? $apcuPrefix : null;
-    }
-
-    /**
-     * The APCu prefix in use, or null if APCu caching is not enabled.
-     *
-     * @return string|null
-     */
-    public function getApcuPrefix()
-    {
-        return $this->apcuPrefix;
-    }
-
-    /**
      * Registers this instance as an autoloader.
      *
      * @param bool $prepend Whether to prepend the autoloader or not
@@ -287,6 +313,11 @@ class ClassLoader
      */
     public function findFile($class)
     {
+        // work around for PHP 5.3.0 - 5.3.2 https://bugs.php.net/50731
+        if ('\\' == $class[0]) {
+            $class = substr($class, 1);
+        }
+
         // class map lookup
         if (isset($this->classMap[$class])) {
             return $this->classMap[$class];
@@ -294,22 +325,12 @@ class ClassLoader
         if ($this->classMapAuthoritative || isset($this->missingClasses[$class])) {
             return false;
         }
-        if (null !== $this->apcuPrefix) {
-            $file = apcu_fetch($this->apcuPrefix.$class, $hit);
-            if ($hit) {
-                return $file;
-            }
-        }
 
         $file = $this->findFileWithExtension($class, '.php');
 
         // Search for Hack files if we are running on HHVM
         if (false === $file && defined('HHVM_VERSION')) {
             $file = $this->findFileWithExtension($class, '.hh');
-        }
-
-        if (null !== $this->apcuPrefix) {
-            apcu_add($this->apcuPrefix.$class, $file);
         }
 
         if (false === $file) {
@@ -327,13 +348,9 @@ class ClassLoader
 
         $first = $class[0];
         if (isset($this->prefixLengthsPsr4[$first])) {
-            $subPath = $class;
-            while (false !== $lastPos = strrpos($subPath, '\\')) {
-                $subPath = substr($subPath, 0, $lastPos);
-                $search = $subPath.'\\';
-                if (isset($this->prefixDirsPsr4[$search])) {
-                    foreach ($this->prefixDirsPsr4[$search] as $dir) {
-                        $length = $this->prefixLengthsPsr4[$first][$search];
+            foreach ($this->prefixLengthsPsr4[$first] as $prefix => $length) {
+                if (0 === strpos($class, $prefix)) {
+                    foreach ($this->prefixDirsPsr4[$prefix] as $dir) {
                         if (file_exists($file = $dir . DIRECTORY_SEPARATOR . substr($logicalPathPsr4, $length))) {
                             return $file;
                         }

@@ -43,22 +43,39 @@ Route::group(['as' => 'admin.','prefix' => 'admin'],function(){
 
 Route::group(['as' => 'usuario.', 'middleware' => ['auth:web']],function(){
   
+  /* ############## PASANAKU ########## */
+
   /* EXTRATO */
   Route::get('/extrato', 'User\Contas\extratoController@index'); 
-
   /* DEPOSITO */
   Route::get('/deposito', 'User\Contas\depositoController@index');
   Route::post('/deposito/novo', 'User\Contas\depositoController@create');
-
-  /* saldo */  
+  /* SALDO */  
   Route::get('/saldo', 'User\Contas\saldoController@index');
+  /* RESGATE */
+  Route::get('/resgate', 'User\Contas\resgateController@index');
+  Route::post('/resgate/novo', 'User\Contas\resgateController@create');
+
+   /* ############## FIM PASANAKU ########## */
+
+  /* ############## SMART ########## */
+    /* EXTRATO */
+    Route::get('/smart/extrato', 'User\Smart\extratoController@index'); 
+    /* DEPOSITO */
+    Route::get('/smart/deposito', 'User\Smart\depositoController@index');
+    Route::post('/smart/deposito/novo', 'User\Smart\depositoController@create');
+    /* SALDO */  
+    Route::get('/smart/saldo', 'User\Smart\saldoController@index');
+    /* RESGATE */
+    Route::get('/smart/resgate', 'User\Smart\resgateController@index');
+    Route::post('/smart/resgate/novo', 'User\Smart\resgateController@create');
+
+      /* ############## FIM SMART ########## */
 
   /* ARRUMAR */
   Route::get('/cliente', function () {return view('iniciocliente');});               
      
-  Route::get('/resgate', 'User\Contas\resgateController@index');
-  Route::post('/resgate/novo', 'User\Contas\resgateController@create');
-
+  
 });
 /* FIM ROTAS CLIENTES */
 

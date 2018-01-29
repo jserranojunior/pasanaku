@@ -10,6 +10,6 @@ class extratoController extends Controller
     public function index(){
         $dados = new Extrato();
         $dados = $dados->index();
-        return view('extrato')->with($dados);
+        return view('user.pasanaku.extrato')->with($dados);
     }
 }

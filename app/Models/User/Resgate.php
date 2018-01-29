@@ -17,8 +17,20 @@ class Resgate extends Model
         ->orderBy('id', 'desc')
         ->get();
 
+        
+        $valor = 0;
+        $existe_saldo = false;
+
+
         foreach($dados as $item){
            $valor = $item->valor;
+           $existe_saldo = true;   
+        }
+
+        if($existe_saldo){
+            $valor = $valor;
+        }else{
+            $valor = $valor;
         }
 
         return($valor);

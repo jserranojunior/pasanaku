@@ -11,7 +11,7 @@ class depositoController extends Controller
     {
         $dataAtual = date('Y-m-d');       
         $dados = array('dataAtual' => $dataAtual);        
-        return view('deposito')->with($dados);
+        return view('user.pasanaku.deposito')->with($dados);
     }
 
     public function create(Request $request){

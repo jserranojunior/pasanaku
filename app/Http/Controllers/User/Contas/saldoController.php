@@ -14,7 +14,7 @@ class saldoController extends Controller
         $saldo = $saldo->index();
         $dados = array('dados' => $saldo);
         
-        return view('saldo')->with($dados);
+        return view('user.pasanaku.saldo')->with($dados);
         
     }
 }

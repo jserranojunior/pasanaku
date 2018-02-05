@@ -1,4 +1,4 @@
-@extends('layouts.headercliente')
+@extends('user.headercliente')
 
 @section('main') 
   <!-- Content Wrapper. Contains page content -->

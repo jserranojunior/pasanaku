@@ -12,6 +12,14 @@ class DatabaseSeeder extends Seeder
     {
         $date = date('Y-m-d h:i:s', time());
 
+        DB::table('admins')
+                    ->insert([
+                        'name' => 'Jorge Serrano Junior',
+                        'email' => 'jorgeserranojunior@hotmail.com',
+                        'password' => Hash::make('carro'),
+                        'image' => 'jorge.jpg',
+                        ]);
+/*
         DB::table('transacoes')
         ->insert([
             'id_user' => 1,
@@ -50,13 +58,7 @@ $table->bigInteger('id_admin')->nullable();
                     'image' => 'david.jpg',
                     ]);
 
-                    DB::table('admins')
-                    ->insert([
-                        'name' => 'Jorge Serrano Junior',
-                        'email' => 'jorgeserranojunior@hotmail.com',
-                        'password' => Hash::make('carro'),
-                        'image' => 'jorge.jpg',
-                        ]);
+                    
 
                         */
     }

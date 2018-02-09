@@ -29,11 +29,19 @@ Route::group(['as' => 'admin.','prefix' => 'admin'],function(){
       /* SESSÂO CLIENTES  */
       Route::get('/clientes','Admin\Clientes\clientesController@index')->name('admin.clientes');
 
-      /* OPERAÇÕES  */
+      /* OPERAÇÕES  PASANAKU */
       Route::get('/operacoes', 'Admin\Operacoes\operacoesController@index')->name('admin.operacoes');
       Route::any('/operacoes/editar/{id}', 'Admin\Operacoes\operacoesController@edit')->name('admin.operacoes.edit');
       Route::post('/operacoes/emitir', 'Admin\Operacoes\operacoesController@emitir')->name('admin.operacoes.emitir');
       Route::post('/operacoes/excluir', 'Admin\Operacoes\operacoesController@excluir')->name('admin.operacoes.excluir');
+    
+    /* OPERACOES SMART */
+    Route::get('/operacoes/smart', 'Admin\Operacoes\smartOperacoesController@index')->name('admin.operacoes.smart');
+    Route::any('/operacoes/smart/editar/{id}', 'Admin\Operacoes\smartOperacoesController@edit')->name('admin.operacoes.smart.edit');
+    Route::post('/operacoes/smart/emitir', 'Admin\Operacoes\smartOperacoesController@emitir')->name('admin.operacoes.smart.emitir');
+    Route::post('/operacoes/smart/excluir', 'Admin\Operacoes\smartOperacoesController@excluir')->name('admin.operacoes.smart.excluir');
+  
+    
     });
   }); 
 /* FIM ROTAS ADMINISTRADOR */

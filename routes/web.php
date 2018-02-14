@@ -3,8 +3,8 @@
 /* ##### ROTAS DEFAULT ###### */
     Route::get('/logout','Auth\LoginController@logout')->name('logout');    
     Route::any('/abrirconta','Auth\RegisterController@create')->name('abrirconta');    
-    Route::get('/inicio', function () {return view('inicio');});
-    Route::get('/', function () {return view('inicio');});
+    Route::get('/inicio', function () {return view('novoinicio');});
+    Route::get('/', function () {return view('novoinicio');});
 /* ##### FIM ROTAS DEFAULT ###### */
 
 /* ##### ROTAS DE AUTH ###### */

@@ -5,10 +5,12 @@
  <title>CONTA DIGITAL</title>
 
     <link href="{{ asset('css/all.css') }}" rel="stylesheet">
-
+    <script src="{{ url('js/all.js') }}"></script> 
   </head>
 
 <body class="body-color-inicio">
+
+
 <div class="container">
         <nav class="navbar navbar-default">
                 <div class="container-fluid">
@@ -65,7 +67,7 @@
         </div>
       </header>
 
-<link href="{{ asset('js/all.js') }}" rel="stylesheet">
+
 
 </body>
 </html>

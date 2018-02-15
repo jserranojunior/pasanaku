@@ -215,6 +215,9 @@ body.color-pasanaku {
 .btn-inicial:hover {
   background-color: #2f2e36; }
 
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff; }
+
 @media (min-width: 992px) {
   .h-titulo {
     font-size: 3rem; } }

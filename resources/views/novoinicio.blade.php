@@ -52,7 +52,7 @@
 
 <header class="masthead text-center text-white d-flex">
         <div class="container">
-          <div class="row row-espaco">
+          <div class="row row-espaco center-vertical">
             
             <div class="col-lg-6 col-xs-6">
             <img src="img/logo-redondo-transparente.png" class="img-responsive" alt="">

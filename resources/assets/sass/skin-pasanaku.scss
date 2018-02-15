@@ -246,6 +246,9 @@ body.color-pasanaku {
     background-color: $black;
 }
 
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
 
 @media (min-width: 992px) {
     .h-titulo {

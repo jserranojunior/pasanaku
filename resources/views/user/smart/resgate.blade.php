@@ -20,7 +20,7 @@
            <form action="{{url('/smart/resgate/novo')}}" method="post" name="formresgate" id="formresgate" class="form-horizontal">
              
               <div class="form-group ">
-                <label for="valor" class="col-lg-6 ">VALOR</label>
+                <label for="valor" class="col-lg-6 ">SMARTCOIN</label>
                 <div class="col-lg-6">  
                   <input type="text" class="form-control dinheiro_mascara" id="valor" name="valor" required>
                 </div>

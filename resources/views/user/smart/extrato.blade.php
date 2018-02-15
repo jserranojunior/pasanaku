@@ -16,7 +16,7 @@
             <thead>    
             <tr>
                     <td>DATA</td>
-                    <td class="text-right">VALOR</td>
+                    <td class="text-right">SMARTCOIN</td>
                 </tr>
         </thead>
                             <tbody>

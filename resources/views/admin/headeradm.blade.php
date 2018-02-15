@@ -112,12 +112,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </a>
               <ul class="treeview-menu">
             <li><a href="{{URL('admin/operacoes')}}"><i class="f"></i> <span>PASANAKU</span>
-                @if($notification > 0) 
+               <!--
+            @if($notification > 0) 
                     <span class="pull-right-container">
                       <span class="label label-primary pull-right">{{$notification}}</span>
                     </span>
                 </a>               
                   @endif
+-->
             </a></li>
              
             <li><a href="{{URL('admin/operacoes/smart')}}"><i class=""></i> <span>SMART</span></a></li>

@@ -54,11 +54,11 @@
         <div class="container">
           <div class="row row-espaco">
             
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-xs-6">
             <img src="img/logo-redondo-transparente.png" class="img-responsive" alt="">
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-xs-6">
             <img src="img/menu-redondo-transparente.png" class="img-responsive" alt="">
             
             </div>

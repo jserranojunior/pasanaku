@@ -8256,6 +8256,5 @@ body.color-pasanaku {
 
 .center-vertical {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  border: 1px dashed deeppink; }
+  top: 45%;
+  transform: translateY(-50%); }

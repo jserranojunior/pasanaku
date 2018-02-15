@@ -59,8 +59,13 @@
             </div>
 
             <div class="col-lg-6 col-xs-6">
-            <img src="img/menu-redondo-transparente.png" class="img-responsive" alt="">
-            
+            <img src="img/menu-redondo-transparente.png" class="img-responsive" usemap="#menu-img" alt="">
+            <map name="menu-img">
+                <area shape="circle" coords="135,248,117" href="{{URL('/register')}}">
+                <area shape="circle" coords="520,416,117" href="{{url('/login')}}">
+                <area shape="circle" coords="436,146,117" href="#">
+                <area shape="circle" coords="238,514,117" href="#">
+            </map>
             </div>
             
           </div>

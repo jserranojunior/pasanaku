@@ -13,8 +13,8 @@
   <body>
 <div class="container-fluid">
 <div class="row">   
-<img src="../../img/layouts/smartpc.jpg" class="pc img-fluid" alt="">
-<img src="../../img/layouts/smartcelular.jpg" class="celular img-fluid" alt="">
+<img src="/smart/img/layouts/smartpc.jpg" class="pc img-fluid" alt="">
+<img src="/smart/img/layouts/smartcelular.jpg" class="celular img-fluid" alt="">
 <style>
 
 

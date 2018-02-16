@@ -190,6 +190,8 @@
             <li><a href="{{URL('smart/extrato')}}"><i class="fa fa-line-chart"></i> <span>EXTRATO</span></a></li>
             <li><a href="{{URL('smart/deposito')}}"><i class="fa fa-plus-square-o"></i> <span>DEPOSITO</span></a></li>
             <li><a href="{{URL('smart/resgate')}}"><i class="fa fa-life-ring"></i> <span>RESGATE</span></a></li>          
+            <li><a href="{{URL('smart/resgate')}}"><i class="fa fa-circle-o-notch "></i> <span>TRANSFÊRENCIAS <br> ENTRE CONTAS</span></a></li>          
+             
               </ul>
             </li>
 

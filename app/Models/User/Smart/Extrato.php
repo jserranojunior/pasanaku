@@ -33,7 +33,7 @@ class Extrato extends Model
            
 
             /* MUDANDO FORMATO DA DATA */
-            $dados->data_efetuada = date('d/m/Y', strtotime($dados->data_efetuada));
+            $dados->data_efetuada = date('Y-m-d H:i:s', strtotime($dados->data_efetuada));
         }
 
         $total = number_format($total, 2,',','.');

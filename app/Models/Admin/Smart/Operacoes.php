@@ -22,9 +22,9 @@ class Operacoes extends Model
         $saldo = $saldo->create($request);       
 
         $id = $request->id;
-        $dataAtual = date('Y-m-d h:i:s', time());
+        $dataAtual = date('Y-m-d H:i:s', time());
 
-        $dataCompleta = date('Y-m-d h:i:s', time());
+        $dataCompleta = date('Y-m-d H:i:s', time());
 
         $id_admin =  auth()->guard('admin')->user()->id;  
         
@@ -47,7 +47,7 @@ class Operacoes extends Model
 
         foreach($select as $item){
             $item->valor = number_format($item->valor, 2, ',','.');
-            $item->data_agendada = date('d-m-Y', strtotime($item->data_agendada));
+            $item->data_agendada = date('Y-m-d H:i:s', strtotime($item->data_agendada));
         }        
             return($select);
     }
@@ -63,7 +63,7 @@ class Operacoes extends Model
 
         foreach($select as $item){
             $item->valor = number_format($item->valor, 2, ',','.');
-            $item->data_agendada = date('d-m-Y', strtotime($item->data_agendada));
+            $item->data_agendada = date('Y-m-d H:i:s', strtotime($item->data_agendada));
         }        
             return($select);
     }

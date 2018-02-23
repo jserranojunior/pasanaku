@@ -25,7 +25,7 @@
                                     {{$item->data_efetuada}}
                                 </td>
                                 <td class="text-right">
-                                    {{$item->tipo}}<span class="dinheiro_mascara">{{$item->valor}}</span>
+                                    {{$item->tipo}}<span class="">{{$item->valor}}</span>
                                 </td>
                             </tr>
                             @endforeach

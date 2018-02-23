@@ -44,8 +44,8 @@ class Saldo extends Model
         $novo_valor_saldo = number_format( $novo_valor_saldo, 2, '.','');
         
        
-        $dataAtual = date('Y-m-d h:i:s', time());
-        $dataCompleta = date('Y-m-d h:i:s', time());
+        $dataAtual = date('Y-m-d H:i:s', time());
+        $dataCompleta = date('Y-m-d H:i:s', time());
 
         $valores = array(
             'id_user' => $id_user,

@@ -40,7 +40,7 @@ class Resgate extends Model
         $request->valor = realToFloat($request->valor);
                   
         $dataAtual = date('Y-m-d');
-        $dataCompleta = date('Y-m-d h:i:s', time());
+        $dataCompleta = date('Y-m-d H:i:s', time());
         $id = auth()->user()->id;  
 
         $dados = array(

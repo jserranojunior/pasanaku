@@ -28,9 +28,14 @@ class Extrato extends Model
                 $total -= $valor;
                 $dados->tipo = "-";
                 }
+            elseif($dados->tipo == "bonus"){
+                $total += $valor;
+                $dados->tipo = "+";
+                
+                }    
             
 
-           
+                $dados->valor =  number_format($valor, 2,',','.');
 
             /* MUDANDO FORMATO DA DATA */
             $dados->data_efetuada = date('d/m/Y', strtotime($dados->data_efetuada));

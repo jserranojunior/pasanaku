@@ -25,9 +25,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('bonusPasanaku:emitir')
-            ->dailyAt('16:01');
-
-                 
+            ->hourly(); 
     }
 
     /**

@@ -250,6 +250,17 @@ body.color-pasanaku {
     background-color: #fff;
 }
 
+a:hover, a:active, a:focus {
+    outline: none;
+    text-decoration: none;
+    color: #000000;
+}
+
+p {
+    font-family: 'Source Sans Pro';
+}
+
+
 @media (min-width: 992px) {
     .h-titulo {
         font-size: 3rem; }
@@ -265,5 +276,5 @@ body.color-pasanaku {
     @media (min-width: 1200px) {
         .h-titulo{
           font-size: 7rem; 
-        }
+        } 
     }    

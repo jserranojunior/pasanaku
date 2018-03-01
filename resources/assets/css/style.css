@@ -8,3 +8,6 @@
   position: absolute;
   top: 45%;
   transform: translateY(-50%); }
+
+img.img-fluid.logo-inicial {
+  width: 60%; }

@@ -1,13 +1,48 @@
 $primary: #ff4d00;
 $primaryHover: #FF5F19;
-$black: #2f2e36;
+$black: #000;
+$greyPrimary: #333333;
+
+.btn-grey-primary{
+    color:white;
+    background-color: $greyPrimary;
+}
+
+.btn-grey-primary:hover{
+    background-color: #1f1f1f;
+    color:white;
+}
+
+.full-width{
+    width: 100%;
+}
+
+.panel-transparent,.panel-transparent > .panel-heading {
+    border-color: #ddd0;
+    background-color:#ddd0;
+    color:white;
+}
+
+.form-control::-webkit-input-placeholder { /* WebKit browsers */
+    color: $black;
+  }  
+  .form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: $black;
+  }  
+  .form-control ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: $black;
+  }  
+  .form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: $black;
+  }
+
 
 .hr-inicio {
     max-width: 50px;
     border-width: 3px;
     border-color: #e52c22; 
 }
-
+ 
 .body-color-inicio{
     background-color: $primary;
 }

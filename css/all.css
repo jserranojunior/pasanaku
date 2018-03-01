@@ -8016,6 +8016,38 @@
    }
  }
  
+.btn-grey-primary {
+  color: white;
+  background-color: #333333; }
+
+.btn-grey-primary:hover {
+  background-color: #1f1f1f;
+  color: white; }
+
+.full-width {
+  width: 100%; }
+
+.panel-transparent, .panel-transparent > .panel-heading {
+  border-color: #ddd0;
+  background-color: #ddd0;
+  color: white; }
+
+.form-control::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #000; }
+
+.form-control:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #000; }
+
+.form-control ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #000; }
+
+.form-control:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #000; }
+
 .hr-inicio {
   max-width: 50px;
   border-width: 3px;
@@ -8200,7 +8232,7 @@ body.color-pasanaku {
 .navbar-default:hover,
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
-  color: #2f2e36; }
+  color: #000; }
 
 .row-espaco {
   margin-top: 50px; }
@@ -8231,7 +8263,7 @@ body.color-pasanaku {
   background-color: #FF5F19; }
 
 .btn-inicial:hover {
-  background-color: #2f2e36; }
+  background-color: #000; }
 
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #fff; }

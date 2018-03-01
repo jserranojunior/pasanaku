@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-4 col-md-offset-4 col-xs-12">
             <div class="panel panel-transparent">
                 <div class="panel-heading text-center">CLIENTE</div>
 
@@ -14,7 +14,7 @@
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             
 
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <input id="email" type="email" placeholder="E-mail" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
 
                                
@@ -24,7 +24,7 @@
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                            
 
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <input id="password" type="password"  placeholder="Senha"  class="form-control" name="password" required>
     
                                
@@ -41,11 +41,12 @@
                         </div> 
                             <div class="form-group">
                             <div class="col-md-12">
-                                <button type="submit" class="btn btn-grey-primary full-width">
-                                    Cadastrar
-                                </button>                               
-                                </div>
-                            
+                                <a href="{{URL('/register')}}">
+                                    <div class="btn btn-grey-primary full-width">
+                                        Cadastrar
+                                    </div>      
+                                </a>                         
+                            </div>                            
                         </div>
                         
                     </form>

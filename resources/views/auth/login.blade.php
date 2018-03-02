@@ -39,11 +39,21 @@
                                 </button>                               
                             </div>
                         </div> 
-                            <div class="form-group">
+                        <div class="form-group">
                             <div class="col-md-12">
                                 <a href="{{URL('/register')}}">
                                     <div class="btn btn-grey-primary full-width">
                                         Cadastrar
+                                    </div>      
+                                </a>                         
+                            </div>                            
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <a href="{{URL('/password/reset')}}">
+                                    <div class="btn full-width text-white">
+                                        Esqueci minha senha
                                     </div>      
                                 </a>                         
                             </div>                            

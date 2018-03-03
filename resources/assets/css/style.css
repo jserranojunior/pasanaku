@@ -10,4 +10,5 @@
   transform: translateY(-50%); }
 
 img.img-fluid.logo-inicial {
-  width: 60%; }
+  width: 60%;
+  border-radius: 50%; }

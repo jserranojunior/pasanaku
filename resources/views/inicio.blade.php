@@ -4,13 +4,13 @@
 <div class="container masthead text-center text-white d-flex">
   <div class="row  row-servicos row-espaco">
     <div class="col-xs-4">
-        <img class="img-fluid logo-inicial" src="{{URL('/img/x.png')}}" alt="">
+        <img class="img-fluid logo-inicial" src="{{URL('/img/pasanaku.png')}}" alt="">
     </div>
     <div class="col-xs-4">
-      <img class="img-fluid logo-inicial" src="{{URL('/img/x.png')}}" alt="">
+      <img class="img-fluid logo-inicial" src="{{URL('/img/smartcoin.png')}}" alt="">
     </div>
     <div class="col-xs-4">
-      <img class="img-fluid logo-inicial" src="{{URL('/img/x.png')}}" alt="">
+      <img class="img-fluid logo-inicial" src="{{URL('/img/visa.png')}}" alt="">
     </div>            
   </div>
   <div class="row  row-servicos row-espaco">            

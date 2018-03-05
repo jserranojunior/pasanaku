@@ -9,13 +9,23 @@ use App\Http\Controllers\Admin\Header\notificacoesController;
 
 class clientesController extends Controller
 {
-    public function index()    
-    {
+
+    public function edit($id){
 
         $notificacao = new notificacoesController();
-        $notificacao = $notificacao->notification();
-      
+        $notificacao = $notificacao->notification();    
 
+        $dados = array('notificacoes' =>  $notificacao);
+
+
+        return view('admin.clientes.editar')->with($dados);
+    }
+
+
+    public function index()    
+    {
+        $notificacao = new notificacoesController();
+        $notificacao = $notificacao->notification();
 
         $dados = new Clientes();    
         $dados = $dados->index();

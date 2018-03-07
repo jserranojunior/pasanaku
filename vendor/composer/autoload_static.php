@@ -351,6 +351,7 @@ class ComposerStaticInit83e28779b66b8b9a3758bb85d31ff5aa
         'App\\Models\\User\\Smart\\Extrato' => __DIR__ . '/../..' . '/app/Models/User/Smart/Extrato.php',
         'App\\Models\\User\\Smart\\Resgate' => __DIR__ . '/../..' . '/app/Models/User/Smart/Resgate.php',
         'App\\Models\\User\\Smart\\Saldo' => __DIR__ . '/../..' . '/app/Models/User/Smart/Saldo.php',
+        'App\\Notifications\\ResetPassword' => __DIR__ . '/../..' . '/app/Notifications/ResetPassword.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',

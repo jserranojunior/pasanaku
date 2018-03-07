@@ -28,7 +28,9 @@ Route::group(['as' => 'admin.','prefix' => 'admin'],function(){
 
       /* SESSÂO CLIENTES  */
       Route::get('/clientes','Admin\Clientes\clientesController@index')->name('admin.clientes');
-      Route::get('/clientes/editar/{id}','Admin\Clientes\clientesController@edit')->name('admin.clientes');
+      Route::get('/clientes/editar/{id}','Admin\Clientes\clientesController@edit')->name('admin.clientes.edit');
+      Route::post('/clientes/atualizar','Admin\Clientes\clientesController@update')->name('clientes.update');
+
 
       /* OPERAÇÕES  PASANAKU */
       Route::get('/operacoes', 'Admin\Operacoes\operacoesController@index')->name('admin.operacoes');

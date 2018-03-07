@@ -25,7 +25,7 @@
     </thead>
     <tbody>     
         @foreach ($dados as $dados)
-            <tr>
+            <tr onclick="editarCliente({{$dados->id}})" class="mouse-point">
                 <td>  {{$dados->name}}</td>
                 <td>  {{$dados->email}}</td>
                 <td class="cpf_mascara">  {{$dados->cpf}}</td>
@@ -40,5 +40,13 @@
 
      </section>
   </div>
+
+  <script>
+  function editarCliente($id){
+
+    window.location.href = "clientes/editar/"+$id;
+  }
+  
+  </script>
 @endsection
 

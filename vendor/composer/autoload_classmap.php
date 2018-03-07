@@ -51,6 +51,7 @@ return array(
     'App\\Models\\User\\Smart\\Extrato' => $baseDir . '/app/Models/User/Smart/Extrato.php',
     'App\\Models\\User\\Smart\\Resgate' => $baseDir . '/app/Models/User/Smart/Resgate.php',
     'App\\Models\\User\\Smart\\Saldo' => $baseDir . '/app/Models/User/Smart/Saldo.php',
+    'App\\Notifications\\ResetPassword' => $baseDir . '/app/Notifications/ResetPassword.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',

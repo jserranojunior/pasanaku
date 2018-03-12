@@ -17,7 +17,8 @@ gulp.task('scripts', function() {
         './resources/assets/js/bootstrap.js',
         './resources/assets/js/adminlte.js',
         './resources/assets/js/internetexplore.js',        
-        './resources/assets/js/jquerymask.js',            
+        './resources/assets/js/jquerymask.js',  
+        './resources/assets/js/cep-automatico.js',          
         './resources/assets/js/funcoes.js'
         
         

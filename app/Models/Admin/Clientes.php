@@ -205,7 +205,7 @@ class Clientes extends Model
 
         foreach($selectDados as $dados){
             if($emptyCoin  == false){
-                $dados->coin_valor = $coinValor;
+                $dados->coin_valor = number_format($coinValor, 2,',','.');
             }else{
                 $dados->coin_valor = 0;
             }

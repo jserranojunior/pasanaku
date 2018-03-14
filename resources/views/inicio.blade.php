@@ -21,6 +21,9 @@
       <h4>ADMINISTRAÇÃO<h4>
     </a>
   </div>
+  <div class="row">
+    <a href="https://play.google.com/store/apps/details?id=com.wSmart_6691693" target="_blank"> <img class="img-fluid logo-google-play" src="{{URL('/img/google-play.png')}}" alt=""> </a>
+  </div>
 </div>
 
 @endsection

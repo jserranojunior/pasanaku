@@ -200,7 +200,7 @@ class Clientes extends Model
         }
 
         foreach($selectPasa as $pasa){
-            $pasaValor = $pasa->valor;
+            $pasaValor = number_format($pasa->valor,2,'.','');
         }
 
         foreach($selectDados as $dados){

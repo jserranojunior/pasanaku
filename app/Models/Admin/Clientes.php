@@ -200,7 +200,7 @@ class Clientes extends Model
         }
 
         foreach($selectPasa as $pasa){
-            $pasaValor = number_format($pasa->valor,2,'.','');
+            $pasaValor = $pasa->valor;
         }
 
         foreach($selectDados as $dados){
@@ -211,15 +211,14 @@ class Clientes extends Model
             }
 
             if($emptyPasa  == false){
-                $dados->pasa_valor = $pasaValor;
+                $dados->pasa_valor = number_format($pasaValor, 2,',','.');
             }else{
                 $dados->pasa_valor = 0;
             }
      
-            
+     
             
         }
-
 
 
         return($selectDados);        

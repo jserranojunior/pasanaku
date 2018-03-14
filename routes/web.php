@@ -44,7 +44,9 @@ Route::group(['as' => 'admin.','prefix' => 'admin'],function(){
     Route::post('/operacoes/smart/emitir', 'Admin\Operacoes\smartOperacoesController@emitir')->name('admin.operacoes.smart.emitir');
     Route::post('/operacoes/smart/excluir', 'Admin\Operacoes\smartOperacoesController@excluir')->name('admin.operacoes.smart.excluir');
   
-    
+    /* OPERACOES ANALISE */
+    Route::get('/analise', 'Admin\Analise\analiseController@index')->name('admin.analise.index');
+      
     });
   }); 
 /* FIM ROTAS ADMINISTRADOR */

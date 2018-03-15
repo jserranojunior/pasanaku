@@ -45,7 +45,7 @@ Route::group(['as' => 'admin.','prefix' => 'admin'],function(){
     Route::post('/operacoes/smart/excluir', 'Admin\Operacoes\smartOperacoesController@excluir')->name('admin.operacoes.smart.excluir');
   
     /* OPERACOES ANALISE */
-    Route::get('/analise', 'Admin\Analise\analiseController@index')->name('admin.analise.index');
+    Route::get('/analise', 'Admin\Analise\analiseController@index')->name('analise.index');
       
     });
   }); 

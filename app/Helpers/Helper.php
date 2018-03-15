@@ -12,6 +12,11 @@
             $valor = number_format($valor,2,'.','');           
             return($valor);
     } 
+
+    function valorEmReal($valor){
+        $valor =  number_format($valor, 2,',','.');
+        return($valor);
+    }
    
 
      

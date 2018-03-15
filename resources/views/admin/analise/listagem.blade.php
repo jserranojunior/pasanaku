@@ -2,6 +2,8 @@
 
 @section('main') 
 
+
+
 <div class="content-wrapper">
     <section class="content-header text-center">
       <h1>
@@ -24,15 +26,15 @@
         <th>RESGATE</th>
         <th>BONUS</th>
     </tr>
-        @foreach($dados as $item)
+        @foreach($dados['dados'] as $item)
         <tr>
             <td>
-                1
+                {{$count++}}
             </td>
             <td>
                 {{$item->name}}
             </td>            
-            <td class="data_completa_mascara">
+            <td class="">
                 {{$item->data_efetuada}}
             </td>
             <td>
@@ -52,6 +54,13 @@
             </td>
         </tr>
         @endforeach
+        <tr class="tr-total-analise">
+            <th colspan="3" class="text-right text-bold  text-primary">TOTAL</th>
+            <td class="text-bold  text-primary">{{$dados['totalDebito']}}</td>
+            <td class="text-bold  text-primary">{{$dados['totalResgate']}}</td>
+            <td class="text-bold  text-primary">{{$dados['totalBonus']}}</td>
+            
+        </tr>
     </table>
 
     </div

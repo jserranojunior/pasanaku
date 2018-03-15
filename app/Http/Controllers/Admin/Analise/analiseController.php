@@ -16,9 +16,9 @@ class analiseController extends Controller
 
         $notificacao = new notificacoesController();
         $notificacao = $notificacao->notification();    
+        $count = 1;
 
-
-        $dados = array('dados' => $dados, 'notificacoes' =>  $notificacao);
+        $dados = array('dados' => $dados, 'count' => $count, 'notificacoes' =>  $notificacao);
 
         return view('admin.analise.listagem')->with($dados);
     }

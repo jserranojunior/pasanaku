@@ -15,7 +15,8 @@ class Analise extends Model
         
         $dados = DB::table('transacoes as t')  
         ->select('t.id', 't.valor','t.tipo', 't.data_efetuada','u.name')
-        ->leftJoin('users as u', 't.id_user', '=', 'u.id')         
+        ->leftJoin('users as u', 't.id_user', '=', 'u.id')  
+        ->orderBy('t.data_efetuada')       
         ->get();
 
         foreach($dados as $item){

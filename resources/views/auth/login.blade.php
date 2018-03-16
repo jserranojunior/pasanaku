@@ -52,7 +52,7 @@
                         <div class="form-group">
                             <div class="col-md-12">
                                 <a href="{{URL('/password/reset')}}">
-                                    <div class="btn full-width text-white">
+                                    <div class="btn full-width text-black">
                                         Esqueci minha senha
                                     </div>      
                                 </a>                         

@@ -15,10 +15,10 @@
   </div>
   <div class="row  row-servicos row-espaco">            
     <a class="text-white text-bold js-scroll-trigger" href="{{url('/login')}}">
-      <h4>Login<h4>
+      <h4>CLIENTE<h4>
     </a>
-    <a class="text-white text-bold js-scroll-trigger" href="{{URL('/register')}}">
-      <h4>Cadastro<h4>
+    <a class="text-white text-bold js-scroll-trigger" href="{{url('/admin/login')}}">
+      <h4>ADMINISTRAÇÃO<h4>
     </a>
   </div>
   <div class="row">

@@ -8304,7 +8304,8 @@ img.img-fluid.logo-inicial {
   border-radius: 50%; }
 
 img.logo-google-play {
-  width: 27%; }
+  width: 27%;
+  margin-top: 25px; }
 
 .tr-total-analise {
   background-color: #fff2ef !important; }

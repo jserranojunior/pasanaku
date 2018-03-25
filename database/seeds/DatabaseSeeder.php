@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-
+/*
        DB::table('transacoes')
        ->where('tipo', 'bonus')
        ->delete();
@@ -60,8 +60,8 @@ class DatabaseSeeder extends Seeder
        DB::table('saldos')->insert($valores);
         }    
         
-
-        /*
+*/
+  
         $date = date('Y-m-d h:i:s', time());
 
         DB::table('admins')

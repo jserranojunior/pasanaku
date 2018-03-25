@@ -23,11 +23,22 @@ class Clientes extends Model
         $request->valor_pasanaku = realToFloat($request->valor_pasanaku);
         $request->valor_coin = realToFloat($request->valor_coin);
 
-        /* VALORES SÒ PODEM SER ALTERADOS APENAS 1 VEZ, PARA NÃO GERAR ERRO NO EXTRATO */
+       
         $valoresUsuario = array(
             'name' => $request->nome,
             'email' => $request->email,
+            'cep' => $request->cep,
+            'bairro' => $request->bairro,
+            'rg' => $request->rg,
+            'mae' => $request->mae,
+            'conjugue' => $request->conjugue,
+            'logradouro' => $request->logradouro,
+            'cidade' => $request->cidade,
+            'estado' => $request->estado,
+            'numero' => $request->numero,
+            'facebook' => $request->facebook,
         );
+                           
 
         
         /* UPDATE PASANAKU */
@@ -129,6 +140,9 @@ class Clientes extends Model
             DB::table('smart_transacoes')->insert($dadosCoin);
         }
        
+        DB::table('users')
+        ->where('id', $request->id)
+        ->update($valoresUsuario);    
     
 /*
         dd($selectExtrato);
@@ -147,7 +161,8 @@ class Clientes extends Model
         $this->date = date('Y-m-d H:i:s', time());
 
         $selectDados = DB::table('users as u')
-        ->select('u.id as id' , 'u.email', 'u.celular','u.data_nascimento', 'u.celular','u.name',
+        ->select('u.id as id' , 'u.rg', 'u.cep','u.bairro', 'u.conjugue', 'u.logradouro', 'u.numero',
+        'u.estado','u.cidade','u.facebook', 'u.mae', 'u.email', 'u.celular','u.data_nascimento', 'u.celular','u.name',
          's.valor as pasa_valor','c.valor as coin_valor')
             ->leftjoin('saldos as s', function ($joinSaldo) {
                 $joinSaldo->on( 'u.id', '=', 's.id_user')
@@ -190,21 +205,20 @@ class Clientes extends Model
 
         foreach($selectDados as $dados){
             if($emptyCoin  == false){
-                $dados->coin_valor = $coinValor;
+                $dados->coin_valor = number_format($coinValor, 2,',','.');
             }else{
                 $dados->coin_valor = 0;
             }
 
             if($emptyPasa  == false){
-                $dados->pasa_valor = $pasaValor;
+                $dados->pasa_valor = number_format($pasaValor, 2,',','.');
             }else{
                 $dados->pasa_valor = 0;
             }
      
-            
+     
             
         }
-
 
 
         return($selectDados);        

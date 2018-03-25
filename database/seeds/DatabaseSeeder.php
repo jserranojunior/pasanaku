@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Models\Admin\Saldo;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -10,6 +12,56 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+
+       DB::table('transacoes')
+       ->where('tipo', 'bonus')
+       ->delete();
+        
+        $users = DB::table('users')
+            ->select('id')
+            ->get();
+        foreach($users as $user){
+            $id_user = $user->id;             
+            
+            $transacoes = DB::table('transacoes')
+            ->select('valor','tipo')
+            ->where('id_user', $id_user)
+            ->get();
+
+            $novo_valor_saldo = 0;   
+            $saldo = 0; 
+            foreach($transacoes as $transacao){               
+                
+                $tipo_transacao = $transacao->tipo;
+                $valor = $transacao->valor;
+
+                if($tipo_transacao == "deposito"){
+                    $novo_valor_saldo +=  $valor;
+                }elseif($tipo_transacao == "resgate"){
+                    $novo_valor_saldo -= $valor;    
+                }elseif($tipo_transacao == "bonus"){
+                    $novo_valor_saldo +=  $valor;
+                }
+            }         
+
+            
+
+                $dataAtual = date('Y-m-d H:i:s', time());
+                $dataCompleta = date('Y-m-d H:i:s', time());
+
+        $valores = array(
+            'id_user' => $id_user,
+            'valor' => $novo_valor_saldo,
+            'data_efetuada' => $dataAtual, 
+            'updated_at' => $dataCompleta,
+            'created_at' => $dataCompleta
+        );
+
+       DB::table('saldos')->insert($valores);
+        }    
+        
+
+        /*
         $date = date('Y-m-d h:i:s', time());
 
         DB::table('admins')

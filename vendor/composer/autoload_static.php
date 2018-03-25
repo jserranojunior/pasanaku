@@ -308,6 +308,7 @@ class ComposerStaticInit83e28779b66b8b9a3758bb85d31ff5aa
     public static $classMap = array (
         'AddBonusId' => __DIR__ . '/../..' . '/database/migrations/2018_02_23_134825_add_bonus_id.php',
         'AddBonusIdTransacoes' => __DIR__ . '/../..' . '/database/migrations/2018_02_23_135213_add_bonus_id_transacoes.php',
+        'AddColluns' => __DIR__ . '/../..' . '/database/migrations/2018_03_12_154352_add_colluns.php',
         'AddColunsPhoneDtNascimento' => __DIR__ . '/../..' . '/database/migrations/2017_12_01_113651_add_coluns_phone_dt_nascimento.php',
         'Admins' => __DIR__ . '/../..' . '/database/migrations/2017_11_17_191916_admins.php',
         'App\\Admin' => __DIR__ . '/../..' . '/app/Admin.php',

@@ -15,11 +15,14 @@
   </div>
   <div class="row  row-servicos row-espaco">            
     <a class="text-white text-bold js-scroll-trigger" href="{{url('/login')}}">
-      <h4>CLIENTE<h4>
+      <h4>LOGIN<h4>
     </a>
-    <a class="text-white text-bold js-scroll-trigger" href="{{url('/admin/login')}}">
-      <h4>ADMINISTRAÇÃO<h4>
+    <a class="text-white text-bold js-scroll-trigger" href="{{URL('/register')}}">
+      <h4>CADASTRO<h4>
     </a>
+  </div>
+  <div class="row">
+    <a href="https://play.google.com/store/apps/details?id=com.wSmart_6691693" target="_blank"> <img class="img-fluid logo-google-play" src="{{URL('/img/google-play.png')}}" alt=""> </a>
   </div>
 </div>
 

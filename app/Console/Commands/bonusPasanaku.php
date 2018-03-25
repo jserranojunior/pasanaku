@@ -75,7 +75,13 @@ class bonusPasanaku extends Command
             
             $valorPorcentagem = $valorSaldo * 1 / 100;
 
+            $valorPorcentagem = notacaoCientifica($valorPorcentagem);
+
             $somaValorPorcentagem = $valorSaldo + $valorPorcentagem;
+            
+                    
+
+            if($somaValorPorcentagem > 0){
 
             /* TRANSACOES/ DEPOSITO */
             $dados = array(
@@ -105,7 +111,7 @@ class bonusPasanaku extends Command
             );
     
            DB::table('saldos')->insert($valores);
-            
+            }
         }            
 
        }

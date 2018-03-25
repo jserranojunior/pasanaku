@@ -101,7 +101,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <li><a href="{{URL('admin/clientes')}}"><i class="fa fa-users"></i> <span>CLIENTES</span></a></li>
         
         
+        <li>
+          <a href="{{Route('admin.analise.index')}}">
+            <i class="fa fa-file-text-o"></i>  
+              <span>ANALISE</span>
+          </a>
+        </li>
 
+        
         <li class="treeview">
               <a href="#">
                   <i class="fa fa-bell-o"></i> <span>OPERACÕES</span>

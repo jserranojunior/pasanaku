@@ -12,6 +12,7 @@
     Route::auth();  
   /* AUTH ADMIN */
     Route::prefix('admin')->group(function() {    
+      Route::get('/','Auth\AdminController@login')->name('admin.dashboard');
       Route::get('/login','Auth\AdminLoginController@login')->name('admin.login');
       Route::post('/login','Auth\AdminLoginController@Postlogin')->name('admin.login.submit');
       Route::get('/logout','Auth\AdminController@logout')->name('admin.logout');
@@ -24,7 +25,7 @@ Route::group(['as' => 'admin.','prefix' => 'admin'],function(){
   
     Route::group(['middleware' => 'web'], function(){  
       /* INICIAL ADMINISTRADOR  */
-      Route::get('/','Auth\AdminController@index')->name('admin.dashboard');
+      // Route::get('/','Auth\AdminController@index')->name('admin.dashboard');
 
       /* SESSÂO CLIENTES  */
       Route::get('/clientes','Admin\Clientes\clientesController@index')->name('admin.clientes');
@@ -44,7 +45,9 @@ Route::group(['as' => 'admin.','prefix' => 'admin'],function(){
     Route::post('/operacoes/smart/emitir', 'Admin\Operacoes\smartOperacoesController@emitir')->name('admin.operacoes.smart.emitir');
     Route::post('/operacoes/smart/excluir', 'Admin\Operacoes\smartOperacoesController@excluir')->name('admin.operacoes.smart.excluir');
   
-    
+    /* OPERACOES ANALISE */
+    Route::get('/analise', 'Admin\Analise\analiseController@index')->name('analise.index');
+      
     });
   }); 
 /* FIM ROTAS ADMINISTRADOR */

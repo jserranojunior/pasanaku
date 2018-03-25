@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'AddBonusId' => $baseDir . '/database/migrations/2018_02_23_134825_add_bonus_id.php',
     'AddBonusIdTransacoes' => $baseDir . '/database/migrations/2018_02_23_135213_add_bonus_id_transacoes.php',
+    'AddColluns' => $baseDir . '/database/migrations/2018_03_12_154352_add_colluns.php',
     'AddColunsPhoneDtNascimento' => $baseDir . '/database/migrations/2017_12_01_113651_add_coluns_phone_dt_nascimento.php',
     'Admins' => $baseDir . '/database/migrations/2017_11_17_191916_admins.php',
     'App\\Admin' => $baseDir . '/app/Admin.php',

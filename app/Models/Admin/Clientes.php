@@ -217,10 +217,10 @@ class Clientes extends Model
         foreach($selectDados as $dados){
 
             /* VERIFICA SE ESTÀ ZERADA A CONTA */
-            if($coinValor == ""){
+            if($coin->valor == ""){
                 $coinValor = 0;
             }
-            if($pasaValor == ""){
+            if($pasa->valor == ""){
                 $pasaValor = 0;
             }
 

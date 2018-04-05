@@ -20,7 +20,14 @@ class Saldo extends Model
         $existe_saldo = false;
 
         foreach($saldo as $item){
-            $valor = number_format($item->valor, 2, ',', '.');  
+
+            if($item->valor > ""){
+                $valor = number_format($item->valor, 2, ',', '.'); 
+            }else{
+                $valor = 0;
+            }
+            
+
             $valor = array('valor' => $valor);
             $existe_saldo = true;                         
         }

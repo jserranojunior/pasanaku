@@ -42,7 +42,7 @@
                 <label for="valor_pasanaku" class="label-control"> Valor Pasanaku </label>
             </td>
             <td> 
-                <input type="text" value="{{$item->pasa_valor}}" class="form-control" name="valor_pasanaku">
+                <input type="text" value="{{$item->pasa_valor}}" class="form-control dinheiro_mascara" name="valor_pasanaku">
             </td>
 
 
@@ -50,7 +50,23 @@
                 <label for="valor_coin" class="label-control"> Valor Smart </label>
             </td>
             <td> 
-                <input type="text" value="{{$item->coin_valor}}" class="form-control" name="valor_coin">
+                <input type="text" value="{{$item->coin_valor}}" class="form-control dinheiro_mascara" name="valor_coin">
+            </td>
+        </tr> 
+        <tr>
+            <td>
+                <label for="data_pasanaku" class="label-control"> Data Pasanaku </label>
+            </td>
+            <td> 
+                <input type="date" value="" class="form-control" name="data_pasanaku">
+            </td>
+
+
+            <td>
+                <label for="data_coin" class="label-control"> Data Smart </label>
+            </td>
+            <td> 
+                <input type="date" value="" class="form-control" name="data_coin">
             </td>
         </tr>   
 

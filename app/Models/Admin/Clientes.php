@@ -20,6 +20,14 @@ class Clientes extends Model
 
         $tipoTransacao = "";
 
+        if($request->data_pasanaku == ""){
+            $request->data_pasanaku = date('Y-m-d');
+        }
+
+        if($request->data_coin == ""){
+            $request->data_coin = date('Y-m-d');
+        }
+
         $request->valor_pasanaku = realToFloat($request->valor_pasanaku);
         $request->valor_coin = realToFloat($request->valor_coin);
 
@@ -68,17 +76,17 @@ class Clientes extends Model
             'id_user' => $request->id,
             'valor' => $valorExtrato,
             'tipo' => $tipoTransacao,
-            'data_agendada' => $dataAtual,
+            'data_agendada' => $request->data_pasanaku,
             'pagamento_feito' =>true,
-            'data_efetuada' => $dataCompleta,
+            'data_efetuada' => $request->data_pasanaku,
             'created_at' => $dataCompleta,
             'updated_at' => $dataCompleta,  
           );
 
           $valoresPasa = array(
-              'id_user' => $request->id,
+            'id_user' => $request->id,
             'valor' => $request->valor_pasanaku,
-            'data_efetuada' => $dataAtual, 
+            'data_efetuada' => $request->data_pasanaku, 
             'updated_at' => $dataCompleta,
             'created_at' => $dataCompleta
         );
@@ -120,9 +128,9 @@ class Clientes extends Model
             'id_user' => $request->id,
             'valor' => $valorExtratoCoin,
             'tipo' => $tipoTransacao,
-            'data_agendada' => $dataAtual,
+            'data_agendada' => $request->data_coin,
             'pagamento_feito' =>true,
-            'data_efetuada' => $dataCompleta,
+            'data_efetuada' => $request->data_coin,
             'created_at' => $dataCompleta,
             'updated_at' => $dataCompleta,  
           );
@@ -130,7 +138,7 @@ class Clientes extends Model
           $valoresCoin = array(
               'id_user' => $request->id,
             'valor' => $request->valor_coin,
-            'data_efetuada' => $dataAtual, 
+            'data_efetuada' => $request->data_coin, 
             'updated_at' => $dataCompleta,
             'created_at' => $dataCompleta
         );
@@ -144,15 +152,12 @@ class Clientes extends Model
         ->where('id', $request->id)
         ->update($valoresUsuario);    
     
-/*
-        dd($selectExtrato);
-    
-        $selectExtratoEmpty = $selectExtrato->isEmpty();
-
-
-        DB::table('users')
-        ->where('id', $request->id)
-        ->update($valoresUsuario);     
+        /*
+            dd($selectExtrato);
+            $selectExtratoEmpty = $selectExtrato->isEmpty();
+            DB::table('users')
+            ->where('id', $request->id)
+            ->update($valoresUsuario);     
         */
        }
 
@@ -163,7 +168,7 @@ class Clientes extends Model
         $selectDados = DB::table('users as u')
         ->select('u.id as id' , 'u.rg', 'u.cep','u.bairro', 'u.conjugue', 'u.logradouro', 'u.numero',
         'u.estado','u.cidade','u.facebook', 'u.mae', 'u.email', 'u.celular','u.data_nascimento', 'u.celular','u.name',
-         's.valor as pasa_valor','c.valor as coin_valor')
+            's.valor as pasa_valor','c.valor as coin_valor')
             ->leftjoin('saldos as s', function ($joinSaldo) {
                 $joinSaldo->on( 'u.id', '=', 's.id_user')
                 ->where('s.data_efetuada','>',  $this->date);
@@ -178,11 +183,14 @@ class Clientes extends Model
         ->get();
 
         $selectCoin = DB::table('smart_saldos')
-            ->select('valor')      
-            ->where('id_user', $id)
-            ->orderBy('id', 'DESC')
-            ->take(1)
+        ->select('valor')  
+        ->where('id_user', $id)        
+        ->orderBy('id', 'desc')
+        ->take(1)
         ->get();
+        
+
+
 
         $selectPasa = DB::table('saldos')
             ->select('valor')      
@@ -191,12 +199,15 @@ class Clientes extends Model
             ->take(1)
         ->get();
 
+      
+
         $emptyCoin = $selectCoin->isEmpty();
         $emptyPasa = $selectPasa->isEmpty();
 
        
         foreach($selectCoin as $coin){
             $coinValor = $coin->valor;
+        
         }
 
         foreach($selectPasa as $pasa){
@@ -204,14 +215,25 @@ class Clientes extends Model
         }
 
         foreach($selectDados as $dados){
-            if($emptyCoin  == false){
-                $dados->coin_valor = number_format($coinValor, 2,',','.');
+
+            /* VERIFICA SE ESTÀ ZERADA A CONTA */
+            if($coinValor == ""){
+                $coinValor = 0;
+            }
+            if($pasaValor == ""){
+                $pasaValor = 0;
+            }
+
+            /* VERIFICA SE NÂO EXISTE INSERT */
+            if($emptyCoin  == false){ 
+                //dd($dados->coin_valor)    ;           
+                $dados->coin_valor = number_format($coinValor, 2,',','.');                
             }else{
                 $dados->coin_valor = 0;
             }
 
             if($emptyPasa  == false){
-                $dados->pasa_valor = number_format($pasaValor, 2,',','.');
+                    $dados->pasa_valor = number_format($pasaValor, 2,',','.');                                
             }else{
                 $dados->pasa_valor = 0;
             }

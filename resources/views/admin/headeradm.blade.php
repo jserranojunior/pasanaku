@@ -132,6 +132,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <li><a href="{{URL('admin/operacoes/smart')}}"><i class=""></i> <span>SMART</span></a></li>
               </ul>
             </li>
+
+            <li>
+          <a href="{{Route('admin.smart.index')}}">
+            <i class="fa fa-line-chart"></i>  
+              <span>SMARTCOIN</span>
+          </a>
+        </li>
        
         <li>
           <a href="{{Route('admin.logout')}}">
@@ -139,6 +146,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <span>SAIR</span>
           </a>
         </li>
+
+        
 
       </ul>
     </section>

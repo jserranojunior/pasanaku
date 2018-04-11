@@ -11,7 +11,7 @@
     </section>
 
     <section class="content container-fluid">
-    <div class="col-xs-8 col-xs-offset-2">
+    <div class="col-md-8 col-md-offset-2">
 <div class="box">
 
     <div class="box-body">  

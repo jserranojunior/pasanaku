@@ -51,6 +51,8 @@ Route::group(['as' => 'admin.','prefix' => 'admin'],function(){
     /* VALORES SMART */
     Route::get('/smart', 'Admin\Smartcoin\smartcoinController@index')->name('smart.index');
     Route::get('/smart/criar', 'Admin\Smartcoin\smartcoinController@create')->name('smart.create');
+    Route::any('/smart/salvar', 'Admin\Smartcoin\smartcoinController@store')->name('smart.store');
+ 
     Route::any('/smart/editar/{id}', 'Admin\Smartcoin\smartcoinController@editar')->name('smart.editar');
       
     });

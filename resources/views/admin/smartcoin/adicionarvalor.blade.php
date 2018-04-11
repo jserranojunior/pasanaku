@@ -11,8 +11,8 @@
     </section>
     
     <section class="content container-fluid">
-        <form action="#">
-            <div class="col-xs-4 col-xs-offset-4">
+        <form action="{{Route('admin.smart.store')}}">
+            <div class="col-md-4 col-md-offset-4">
                 <div class="box">
                     <div class="box-body">
                         <table class="table table-condensed table-hover">
@@ -31,12 +31,14 @@
                         </table>   
                     </div>
                     <div class="box-footer">
-                        <div class="col-xs-6 text-center">
-                            <div class="btn btn-success ">ADICIONAR</div>
-                        </div>
+                       
                         
                         <div class="col-xs-6  text-center">
                             <div class="btn btn-warning">CANCELAR</div>
+                        </div>
+
+                         <div class="col-xs-6 text-center">
+                            <input type="submit" class="btn btn-success" value="ADICIONAR">                            
                         </div>
                         
                     </div>

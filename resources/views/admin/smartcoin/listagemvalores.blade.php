@@ -12,7 +12,7 @@
 
     <section class="content container-fluid">
 
-<div class="col-xs-4 col-xs-offset-4">
+<div class="col-md-4 col-md-offset-4">
 
 <div class="box">
     <div class="box-header text-center">
@@ -29,13 +29,13 @@
             <th>VALOR</th>
          </tr>
     </thead>
-    <tbody>     
-        
+      <tbody>
+      @foreach($dados as $item)     
             <tr onclick="editarSmartCoin()" class="mouse-point">
-                <td>10/03/2016</td>
-                <td>2,00</td>
+                <td class="data_mascara">{{$item->data}}</td>
+                <td class="valor_mascara">{{$item->valor}}</td>
             </tr>      
-        
+      @endforeach  
         </tbody>
         </table>   
   </div>

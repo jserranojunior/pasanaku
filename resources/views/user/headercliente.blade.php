@@ -198,7 +198,10 @@
         
         <li class=""><a target="_blank" href="https://app.conta.mobi/login"><i class="fa fa-university"></i> <span>SMART VISA</span></a></li>  
 
-        
+        <li class=""><a href="{{URL('transferencia')}}"><i class="fa fa-exchange">
+          </i><span>TRANSFÊRENCIA</span></a>
+        </li>  
+
         
         <li><a href="{{Route('logout')}}"><i class="fa fa-power-off"></i> <span>SAIR</span></a></li>
 

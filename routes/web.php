@@ -90,8 +90,10 @@ Route::group(['as' => 'usuario.', 'middleware' => ['auth:web']],function(){
     /* RESGATE */
     Route::get('/smart/resgate', 'User\Smart\resgateController@index');
     Route::post('/smart/resgate/novo', 'User\Smart\resgateController@create');
-
       /* ############## FIM SMART ########## */
+
+    /* TRANSFERENCIAS */
+    Route::get('/transferencia','User\Transferencia\transferenciaController@index');  
 
   /* ARRUMAR */
   Route::get('/cliente', function () {return view('iniciocliente');});               

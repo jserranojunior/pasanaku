@@ -219,13 +219,17 @@
   
   <!-- Main Footer -->
   <footer class="main-footer">
-  <img class="img-reponsive logo-whats-footer" src="{{URL('img')}}/whatsapp.jpeg" alt="">
+  
     <!-- To the right -->
-    <div class="pull-right hidden-xs">
-      Realizando sonhos 
-    </div>
+    <a href="https://web.whatsapp.com/send?phone=5511986752530">
+      <div class="pull-right hidden-xs text-bold text-success">
+        CONTATO
+        <img class="img-reponsive logo-whats-footer" src="{{URL('img')}}/whatsapp.jpeg" alt="">
+      </div>
+    </a>
+
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2017 <a href="#">SMART</a>.</strong>
+    <strong> <a href="/">SMART</a> - </strong> Realizando sonhos 
     
   </footer>
 

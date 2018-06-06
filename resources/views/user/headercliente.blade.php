@@ -200,7 +200,11 @@
 
         <li class=""><a href="{{URL('transferencia')}}"><i class="fa fa-exchange">
           </i><span>TRANSFÊRENCIA</span></a>
-        </li>  
+        </li>
+
+        <li class=""><a href="https://web.whatsapp.com/send?phone=5511986752530"><i class="fa fa-comments">
+          </i><span>CONTATO</span></a>
+        </li>   
 
         
         <li><a href="{{Route('logout')}}"><i class="fa fa-power-off"></i> <span>SAIR</span></a></li>

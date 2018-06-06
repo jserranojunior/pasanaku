@@ -219,7 +219,28 @@
   @yield('main')
 
   
+  <script>
+  
+ /**
+ * @function isMobile
+ * detecta se o useragent e um dispositivo mobile
+ */
+function isMobile()
+{
+	var userAgent = navigator.userAgent.toLowerCase();
+	if( userAgent.search(/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i)!= -1 )
+		return true;
+}
 
+$isMobile = isMobile();
+
+if($isMobile == true){
+  alert('mobile');
+}else{
+  alert('navegador');
+}
+
+  </script>
   
   <!-- Main Footer -->
   <footer class="main-footer">

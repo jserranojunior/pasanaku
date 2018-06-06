@@ -212,7 +212,6 @@
   </aside>
 
 
-
   @yield('main')
 
   
@@ -220,12 +219,14 @@
   
   <!-- Main Footer -->
   <footer class="main-footer">
+  <img class="img-reponsive logo-whats-footer" src="{{URL('img')}}/whatsapp.jpeg" alt="">
     <!-- To the right -->
     <div class="pull-right hidden-xs">
-      Realizando sonhos
+      Realizando sonhos 
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2017 <a href="#">Pasanaku</a>.</strong>
+    <strong>Copyright &copy; 2017 <a href="#">SMART</a>.</strong>
+    
   </footer>
 
   <!-- Control Sidebar -->

@@ -223,7 +223,7 @@
     <!-- To the right -->
     <a href="https://web.whatsapp.com/send?phone=5511986752530">
       <div class="pull-right hidden-xs text-bold text-success">
-        CONTATO
+         CONTATO
         <img class="img-reponsive logo-whats-footer" src="{{URL('img')}}/whatsapp.jpeg" alt="">
       </div>
     </a>

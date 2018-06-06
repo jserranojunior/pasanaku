@@ -204,23 +204,33 @@ class Clientes extends Model
         $emptyCoin = $selectCoin->isEmpty();
         $emptyPasa = $selectPasa->isEmpty();
 
+        if($emptyCoin == true){
+            $coinValor = 0;
+        }else{
+            foreach($selectCoin as $coin){
+                $coinValor = $coin->valor;        
+            }
+        }
        
-        foreach($selectCoin as $coin){
-            $coinValor = $coin->valor;
-        
+        if($emptyPasa == true){
+            $pasaValor = 0;
+        }else{
+            foreach($selectPasa as $pasa){
+                $pasaValor = $pasa->valor;
+            }
         }
 
-        foreach($selectPasa as $pasa){
-            $pasaValor = $pasa->valor;
-        }
+     
 
         foreach($selectDados as $dados){
 
+            
+
             /* VERIFICA SE ESTÀ ZERADA A CONTA */
-            if($dados->coin_valor == ""){
+            if($coinValor == ""){
                 $coinValor = 0;
             }
-            if($dados->coin_valor == ""){
+            if($pasaValor == ""){
                 $pasaValor = 0;
             }
 

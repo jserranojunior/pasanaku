@@ -29,7 +29,7 @@
                    
 
                             <div class="col-md-12">
-                                <input id="cpf" type="text" class="form-control cpf_mascara" placeholder="Cpf"  name="cpf" value="{{ old('cpf') }}">
+                                <input id="cpf" type="text" class="form-control cpf_mascara" placeholder="CPF ou CNPJ"  name="cpf" value="{{ old('cpf') }}"  required >
 
                                 @if ($errors->has('cpf'))
                                     <span class="help-block">

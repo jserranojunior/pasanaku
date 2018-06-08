@@ -45,8 +45,9 @@ class Clientes extends Model
             'estado' => $request->estado,
             'numero' => $request->numero,
             'facebook' => $request->facebook,
+            'cpf' => preg_replace("/[^0-9]/", "", $request->cpf),
         );
-                           
+
 
         
         /* UPDATE PASANAKU */
@@ -152,13 +153,7 @@ class Clientes extends Model
         ->where('id', $request->id)
         ->update($valoresUsuario);    
     
-        /*
-            dd($selectExtrato);
-            $selectExtratoEmpty = $selectExtrato->isEmpty();
-            DB::table('users')
-            ->where('id', $request->id)
-            ->update($valoresUsuario);     
-        */
+     
        }
 
     public function editar($id){
@@ -166,7 +161,7 @@ class Clientes extends Model
         $this->date = date('Y-m-d H:i:s', time());
 
         $selectDados = DB::table('users as u')
-        ->select('u.id as id' , 'u.rg', 'u.cep','u.bairro', 'u.conjugue', 'u.logradouro', 'u.numero',
+        ->select('u.id as id' ,'u.cpf', 'u.rg', 'u.cep','u.bairro', 'u.conjugue', 'u.logradouro', 'u.numero',
         'u.estado','u.cidade','u.facebook', 'u.mae', 'u.email', 'u.celular','u.data_nascimento', 'u.celular','u.name',
             's.valor as pasa_valor','c.valor as coin_valor')
             ->leftjoin('saldos as s', function ($joinSaldo) {
@@ -223,9 +218,7 @@ class Clientes extends Model
      
 
         foreach($selectDados as $dados){
-
             
-
             /* VERIFICA SE ESTÀ ZERADA A CONTA */
             if($coinValor == ""){
                 $coinValor = 0;
@@ -255,14 +248,7 @@ class Clientes extends Model
 
         return($selectDados);        
     }
-/* 
- //  ->select('u.id', 'u.email', 'u.celular','u.data_nascimento', 'u.celular')
- ->leftjoin('saldos as s', function ($join) {
-            $join->on( 'u.id', '=', 's.id_user')
-                ->orderBy('s.id', 'asc');   
-        })
 
-*/
 
     public function index()
     {

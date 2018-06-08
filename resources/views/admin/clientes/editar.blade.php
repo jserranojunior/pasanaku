@@ -32,8 +32,15 @@
             <td>
                 <label for="email" class="label-control"> E-mail </label>
             </td>
-            <td  colspan="3"> 
+            <td  colspan=""> 
                 <input type="text" class="form-control" value="{{$item->email}}" name="email">
+            </td>
+
+            <td>
+                <label for="cpf" class="label-control"> CPF ou CNPJ </label>
+            </td>
+            <td  colspan=""> 
+                <input type="text" class="form-control cpf_mascara" value="{{$item->cpf}}" name="cpf">
             </td>
         </tr>   
         

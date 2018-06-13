@@ -93,7 +93,8 @@ Route::group(['as' => 'usuario.', 'middleware' => ['auth:web']],function(){
       /* ############## FIM SMART ########## */
 
     /* TRANSFERENCIAS */
-    Route::get('/transferencia','User\Transferencia\transferenciaController@index');  
+    Route::get('/transferencia','User\Transferencia\transferenciaController@index')->name('transfer');
+    Route::post('/transferencia/confirmacao','User\Transferencia\transferenciaController@confirmation')->name('transfer.confirmation'); 
 
   /* ARRUMAR */
   Route::get('/cliente', function () {return view('iniciocliente');});               

@@ -202,7 +202,7 @@
           </i><span>TRANSFÊRENCIA</span></a>
         </li>
 
-        <li ><a class="link-whatsapp" href="/"><i class="fa fa-comments">
+        <li ><a class="link-whatsapp" href="whatsapp://send?phone=5511986752530"><i class="fa fa-comments">
           </i><span>CONTATO</span></a>
         </li>   
 
@@ -226,7 +226,7 @@
   <footer class="main-footer">
   
     <!-- To the right -->
-    <a class="link-whatsapp" id="link-whatsapp-footer"  href="http://www.alvitre.com/">
+    <a class="link-whatsapp" id="link-whatsapp-footer"  href="whatsapp://send?phone=5511986752530">
       <div class="pull-right hidden-xs text-bold text-success">
          CONTATO
         <img class="img-reponsive logo-whats-footer" src="{{URL('img')}}/whatsapp.jpeg" alt="">

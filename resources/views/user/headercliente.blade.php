@@ -196,7 +196,12 @@
             </li>
 
         
-        <li class=""><a target="_blank" href="https://app.conta.mobi/login"><i class="fa fa-university"></i> <span>SMART VISA</span></a></li>  
+        <li class=""><a target="_blank" href="https://app.conta.mobi/login"><i class="fa fa-university"></i> <span>MOBI VISA</span></a></li>  
+
+       <li class=""><a target="_blank" href="https://meu.brasilprepagos.com.br/bpp?_ga=2.8126130.1635589378.1529004737-698247966.1526345326&_gac=1.250867188.1529004835.CjwKCAjwpIjZBRBsEiwA0TN1r4qyFvjPFSbp5mifabKgf3FAKymNuLCq6aBGLX4fIUPiMsO9Z6P0qhoCOC"><i class="fa fa-bold"></i> <span>BPP VISA</span></a></li>  
+
+        <li class=""><a target="_blank" href="https://play.google.com/store/apps/details?id=br.com.brasilprepago"><i class="fa fa-arrow-circle-down"></i> <span>BPP APP</span></a></li>  
+
 
         <li class=""><a href="{{URL('transferencia')}}"><i class="fa fa-exchange">
           </i><span>TRANSFÊRENCIA</span></a>

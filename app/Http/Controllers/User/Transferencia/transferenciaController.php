@@ -12,7 +12,19 @@ class transferenciaController extends Controller
     }
 
     public function confirmation(Request $request, Transfer $transfer){    
-        $dados = $transfer->confirmation($request);
-        return view('user.transferencia.confirmar')->with($dados);
+        
+        $dadosError  = $transfer->validation($request);
+        $validation = ['dadosError' => $dadosError];
+
+        //dd($dadosError);
+
+        if($dadosError['error'] == true){
+            return view('user.transferencia.index')->with($validation);
+        }else{
+            $dados = $transfer->confirmation($request);
+            return view('user.transferencia.confirmar')->with($dados);
+        }
+        
+        
     }
 }

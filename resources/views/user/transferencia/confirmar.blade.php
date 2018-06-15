@@ -49,7 +49,7 @@
         
             
         </div>
-
+                <input type="hidden" name="id" value="auth()->user()->image">
                 <input type="hidden" name="_token" value="{{$tipo_conta}}">
                 <input type="hidden" name="valor" value="{{$valor}}">                
                 <input type="hidden" name="cpf" value="{{$cpf}}">              

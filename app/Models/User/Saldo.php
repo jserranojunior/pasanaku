@@ -1,9 +1,8 @@
 <?php
 
 namespace App\Models\User;
-
-use Illuminate\Database\Eloquent\Model;
 use DB;
+use Illuminate\Database\Eloquent\Model;
 
 class Saldo extends Model
 {

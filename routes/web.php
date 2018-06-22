@@ -95,6 +95,7 @@ Route::group(['as' => 'usuario.', 'middleware' => ['auth:web']],function(){
     /* TRANSFERENCIAS */
     Route::get('/transferencia','User\Transferencia\transferenciaController@index')->name('transfer');
     Route::post('/transferencia/confirmacao','User\Transferencia\transferenciaController@confirmation')->name('transfer.confirmation'); 
+    Route::post('/transferencia/confirmed','User\Transferencia\transferenciaController@transfer')->name('transfer.confirmed'); 
 
   /* ARRUMAR */
   Route::get('/cliente', function () {return view('iniciocliente');});               

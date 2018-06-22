@@ -78,8 +78,11 @@ class bonusPasanaku extends Command
             $valorPorcentagem = notacaoCientifica($valorPorcentagem);
 
             $somaValorPorcentagem = $valorSaldo + $valorPorcentagem;
+
+            $somaValorPorcentagem = floatTwoDecimals($somaValorPorcentagem);
+
             
-                    
+            $valorPorcentagem = floatTwoDecimals($valorPorcentagem);
 
             if($somaValorPorcentagem > 0){
 

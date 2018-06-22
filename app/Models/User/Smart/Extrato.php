@@ -12,6 +12,7 @@ class Extrato extends Model
         $select = DB::table('smart_transacoes')
         ->select('valor', 'data_efetuada', 'tipo')
         ->where('id_user', $id)
+        ->orderBy('id', 'desc')
         ->Where('pagamento_feito', true)
         ->get();       
 
@@ -21,17 +22,14 @@ class Extrato extends Model
             $valor = $dados->valor;
             $tipo = $dados->tipo;
 
-            if($dados->tipo == "deposito"){
+            if($dados->tipo == "deposito" or $dados->tipo == "deposito_transfer"){
             $total += $valor;
             $dados->tipo = "+";
-            }elseif($dados->tipo == "resgate"){
+        }elseif($dados->tipo == "resgate" or $dados->tipo == "resgate_transfer"){
                 $total -= $valor;
                 $dados->tipo = "-";
                 }
-            
-
-           
-
+               
             /* MUDANDO FORMATO DA DATA */
             $dados->data_efetuada = date('d/m/Y', strtotime($dados->data_efetuada));
         }

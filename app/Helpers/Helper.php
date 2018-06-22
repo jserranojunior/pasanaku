@@ -17,6 +17,11 @@
         $valor =  number_format($valor, 2,',','.');
         return($valor);
     }
+
+    function floatTwoDecimals($valor){
+        $valor = number_format($valor,2,'.',''); 
+        return($valor);
+    }
    
 
      

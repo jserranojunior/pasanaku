@@ -30,15 +30,18 @@ class Transfer extends Model
         if($tipo_conta == "pasanaku"){
             $selectSaldos = $this->saldos->where('id_user', '=', auth()->user()->id)->orderBy('data_efetuada','desc')->take(1)->get();     
           
+            if($selectSaldos->isEmpty()){
+                $dadosError['message'] = "Saldo Insuficiente";
+                    $dadosError['error'] = "true";
+            }
+
             foreach($selectSaldos as $valorSaldo){
 
                 $valorSaldo->valor = number_format($valorSaldo->valor,'2',',','.');
                 $valorSaldo->valor =  realToFloat($valorSaldo->valor);
                 $valorSaldo->valor = floatTwoDecimals($valorSaldo->valor);
-
-                
-                          
-                if($ValueTransfer > $valorSaldo->valor){
+                                         
+                if($ValueTransfer > $valorSaldo->valor or $valorSaldo->valor == 0 or $valorSaldo->valor == null){
                     $dadosError['message'] = "Saldo Pasanaku Insuficiente";
                     $dadosError['error'] = "true";
                    

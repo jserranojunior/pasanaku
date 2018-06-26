@@ -163,7 +163,7 @@
         <li class="treeview">
             <a href="#">
               <i class="fa  fa-bar-chart"></i>
-              <span>PASANAKU</span> 
+              <span>PASANAKU INVEST</span> 
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>           

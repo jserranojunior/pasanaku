@@ -32,7 +32,7 @@ class transferenciaController extends Controller
     }
 
     public function transfer(Request $request, Transfer $transfer){
-        $transfer = $transfer->confirmed($request);
-        return view('user.transferencia.index');
+        $transfer = $transfer->confirmed($request);              
+        return view('user.transferencia.finish');
     }
 }

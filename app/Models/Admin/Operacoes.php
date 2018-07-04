@@ -46,7 +46,7 @@ class Operacoes extends Model
 
         foreach($select as $item){
             $item->valor = number_format($item->valor, 2, ',','.');
-            $item->data_agendada = date('Y-m-d H:i:s', strtotime($item->data_agendada));
+            $item->data_agendada = date('d/m/Y', strtotime($item->data_agendada));
         }        
             return($select);
     }

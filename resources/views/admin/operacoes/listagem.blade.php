@@ -58,7 +58,7 @@
                             <span class="">{{$item->valor}}</span>
                         </td>
                         <td>
-                            <span class="data_mascara">{{$item->data_agendada}}</span>
+                            <span class="">{{$item->data_agendada}}</span>
                         </td>
                         
                     </tr> 
